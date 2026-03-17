@@ -1,5 +1,5 @@
 * {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin:0;
     padding:0;
 
@@ -15,14 +15,15 @@ a {
 }
 .logo img{
     display:block;
-    margin: 0 auto 10px;
+    margin: 0 auto 0.625rem;
 }
 .nav-menu{
     display: flex;
-    gap: 40px;
-    font-size: 20px;
+    gap: 2.5rem;
+    font-size: 1rem;
     /* text-align: center; */
     justify-content: center;
+    margin-bottom: 2.5rem;
 }
 .dropdown{
     position: relative;
@@ -30,12 +31,12 @@ a {
 .dropdown a{
     font-weight: bold;
     color: #333;
-    padding: 10px;
+    padding: 0.625rem;
 }
 .dropdown-content{
     /* display:none; */
     display: flex;
-    gap:30px;
+    gap:1.875rem;
 
     position: absolute;
     top: 100%;
@@ -45,10 +46,10 @@ a {
     background-color: #fff;
     /* min-width: 1000px; */
     width: max-content;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
-    padding:20px;
+    box-shadow: 0rem 0.5rem 1rem rgba(0,0,0,0.1);
+    padding:1.25rem;
     z-index: 1;
-    border-radius: 4px;
+    border-radius: 0.25rem;
 
     transition: all 0.2s ease-in-out;
     opacity: 0;
@@ -66,15 +67,112 @@ a {
     flex-direction: column;
 }
 .data h3{
-    font-size: 20px;
+    font-size: 1.25rem;
     color:#000;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+    border-bottom: 0.125rem solid #eee;
+    padding-bottom: 0.625rem;
+    margin-bottom: 0.625rem;
 }
 .data a{
-    padding: 8px 0;
+    padding: 0.5rem 0;
     color:#666;
     font-weight: normal;
-    font-size:20px ;
+    font-size:1.25rem ;
+}
+.search{
+    background-color:rgb(232, 228, 213);
+    padding-bottom:6.25rem ;
+}
+.search-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3.125rem;
+    padding-bottom: 1rem;
+}
+.search-div-h1{
+    font-family: 'Montserrat', sans-serif;
+}
+.search-p-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5rem;
+}
+.search-p{
+    font-family: 'Montserrat', sans-serif;
+}
+.search-input-div{
+    display: flex;
+    justify-content: center;
+}
+.search-input{
+    padding-left: 0.625rem;
+    width: 51.5625rem;
+    height: 2.5rem;
+}
+.search-input:focus::placeholder{
+    color: transparent; /* Chữ biến mất khi người dùng nhấn vào ô để gõ */
+    transition: 0.3s;   /* Hiệu ứng mượt mà */
+    
+}
+.search-input-button{
+    padding-left: 5px;
+}
+.DGNL-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.DGNL-div-img{
+    width: 3.75rem ;
+    height: 3.75rem;
+}
+.DGNL-div-h2-strong{
+    height:auto;
+    width: 300px;
+    text-align: center;
+}
+.DGNL-div-p{
+    height: auto;
+    width: 320px;
+    text-align: center;
+}
+.TSA-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.TSA-div-img{
+    width: 2.375rem ;
+    height: 3.625rem;
+}
+.TSA-div-h2{
+    height:auto;
+    width: 300px;
+    text-align: center;
+}
+.TSA-div-p{
+    height: auto;
+    width: 320px;
+    text-align: center;
+}
+.VACT-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.VACT-div-img{
+    width: 8rem ;
+    height: 4.25rem;
+}
+.VACT-div-h2{
+    height:auto;
+    width: 300px;
+    text-align: center;
+}
+.VACT-div-p{
+    height: auto;
+    width: 320px;
+    text-align: center;
 }
