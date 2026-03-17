@@ -135,16 +135,16 @@ a {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 80%;
+    width: 70%;
     height: auto;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 .DGNL-div{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 40px;
+    margin: 0px;
 }
 .DGNL-div-img{
     width: 3.75rem ;
@@ -169,7 +169,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 40px;
+    margin: 0px;
 }
 .TSA-div-img{
     width: 2.375rem ;
@@ -194,7 +194,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 40px;
+    margin: 0px;
 }
 .VACT-div-img{
     width: 8rem ;
@@ -219,7 +219,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 40px;
+    margin: 0px;
 }
 .SPHN-div-img{
     width: 4rem ;
@@ -244,7 +244,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 40px;
+    margin: 0px;
 }
 .THPT-div-img{
     width: 4rem ;
@@ -269,7 +269,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 40px;
+    margin: 0px;
 }
 .THITHPT-div-img{
     width: 4rem ;
@@ -289,4 +289,96 @@ a {
 .THITHPT-div-p:hover{
     color: #000;
     transition: 0.75s;
+}
+.TLDGNLHSA-div{
+
+}
+.TLDGNLHSA-div-h1{
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+.TLDGNLHSA-menu-div-div{
+    display: flex;
+    justify-content:center;
+}
+.TLDGNLHSA-menu-div-div-label{
+    margin: 10px;
+}
+.tab-content-div{
+    width: 70%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+input[type="radio"] {
+    display: none;
+}
+.tab-content-div-toan, 
+.tab-content-div-ngon-ngu-van-hoc, 
+.tab-content-div-khoa-hoc, 
+.tab-content-div-TA,
+.tab-content-div-de-minh-hoa{
+    display: none;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#toan-hoc:checked ~ .tab-content-div .tab-content-div-toan {
+    display: flex; 
+}
+#ngon-ngu-van-hoc:checked ~ .tab-content-div .tab-content-div-ngon-ngu-van-hoc{
+    display: flex;
+}
+#khoa-hoc:checked ~ .tab-content-div .tab-content-div-khoa-hoc{
+    display: flex;
+}
+#TA:checked ~ .tab-content-div .tab-content-div-TA{
+    display: flex;
+}
+#de-minh-hoa:checked ~ .tab-content-div .tab-content-div-de-minh-hoa{
+    display: flex;
+}
+#toan-hoc:checked ~ .TLDGNLHSA-menu-div-div [for="toan-hoc"],
+#ngon-ngu-van-hoc:checked ~ .TLDGNLHSA-menu-div-div [for="ngon-ngu-van-hoc"],
+#khoa-hoc:checked ~ .TLDGNLHSA-menu-div-div [for="khoa-hoc"],
+#TA:checked ~ .TLDGNLHSA-menu-div-div [for="TA"],
+#de-minh-hoa:checked ~ .TLDGNLHSA-menu-div-div [for="de-minh-hoa"] {
+    color: #000;
+    transition: 0,5s;
+}
+.tab-toan,
+.tab-ngon-ngu-van-hoc,
+.tab-khoa-hoc,
+.tab-TA,
+.tab-de-minh-hoa
+{
+    width: 250px;
+    height: 125px;
+}
+
+.tab-content-img{
+    width: 250px;
+    height: auto;
+    transition:all 0.5s ease-in-out ;
+
+}
+.tab-content-p{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition:all 0.5s ease-in-out ;
+}
+.tab-toan:hover .tab-content-img,
+.tab-toan:hover .tab-content-p{
+    transform: scale(0.92);
+    transform-origin: center;
+}
+.TLTSA{
+    display: flex;
+}
+.TLTSA-div-h1{
+    text-align: center;
+    padding-top: 100px ;
 }
