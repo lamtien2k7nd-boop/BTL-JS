@@ -119,10 +119,29 @@ a {
 .search-input-button{
     padding-left: 5px;
 }
+.DM-div{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    margin-top: 40px;
+}
+.DM-div-h1{
+
+}
+.nav-1{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
 .DGNL-div{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 40px;
 }
 .DGNL-div-img{
     width: 3.75rem ;
@@ -137,11 +156,13 @@ a {
     height: auto;
     width: 320px;
     text-align: center;
+    margin-top: 20px;
 }
 .TSA-div{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 40px;
 }
 .TSA-div-img{
     width: 2.375rem ;
@@ -156,11 +177,13 @@ a {
     height: auto;
     width: 320px;
     text-align: center;
+    margin-top: 20px;
 }
 .VACT-div{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 40px;
 }
 .VACT-div-img{
     width: 8rem ;
@@ -175,4 +198,68 @@ a {
     height: auto;
     width: 320px;
     text-align: center;
+    margin-top: 20px;
+}
+.SPHN-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+}
+.SPHN-div-img{
+    width: 4rem ;
+    height: 4rem;
+}
+.SPHN-div-h3{
+    height:auto;
+    width: 300px;
+    text-align: center;
+}
+.SPHN-div-p{
+    height: auto;
+    width: 320px;
+    text-align: center;
+    margin-top: 20px;
+}
+.THPT-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+}
+.THPT-div-img{
+    width: 4rem ;
+    height: 4rem;
+}
+.THPT-div-h3{
+    height:auto;
+    width: 300px;
+    text-align: center;
+}
+.THPT-div-p{
+    height: auto;
+    width: 320px;
+    text-align: center;
+    margin-top: 20px;
+}
+.THITHPT-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+}
+.THITHPT-div-img{
+    width: 4rem ;
+    height: 4rem;
+}
+.THITHPT-div-h3{
+    height:auto;
+    width: 300px;
+    text-align: center;
+}
+.THITHPT-div-p{
+    height: auto;
+    width: 320px;
+    text-align: center;
+    margin-top: 20px;
 }
