@@ -2,8 +2,11 @@
     font-family: 'Montserrat', sans-serif;
     margin:0;
     padding:0;
-
+    color: rgba(54, 54, 35, 0.797);
 }
+/* p{
+    color: rgba(54, 54, 35, 0.797);
+} */
 a {
     text-decoration: none;
     color: black;
@@ -158,6 +161,10 @@ a {
     text-align: center;
     margin-top: 20px;
 }
+.DGNL-div-p:hover{
+    color: #000;
+    transition: 0.75s;
+}
 .TSA-div{
     display: flex;
     flex-direction: column;
@@ -178,6 +185,10 @@ a {
     width: 320px;
     text-align: center;
     margin-top: 20px;
+}
+.TSA-div-p:hover{
+    color: #000;
+    transition: 0.75s;
 }
 .VACT-div{
     display: flex;
@@ -200,6 +211,10 @@ a {
     text-align: center;
     margin-top: 20px;
 }
+.VACT-div-p:hover{
+    color: #000;
+    transition: 0.75s;
+}
 .SPHN-div{
     display: flex;
     flex-direction: column;
@@ -220,6 +235,10 @@ a {
     width: 320px;
     text-align: center;
     margin-top: 20px;
+}
+.SPHN-div-p:hover{
+    color: #000;
+    transition: 0.75s;
 }
 .THPT-div{
     display: flex;
@@ -242,6 +261,10 @@ a {
     text-align: center;
     margin-top: 20px;
 }
+.THPT-div-p:hover{
+    color: #000;
+    transition: 0.75s;
+}
 .THITHPT-div{
     display: flex;
     flex-direction: column;
@@ -262,4 +285,8 @@ a {
     width: 320px;
     text-align: center;
     margin-top: 20px;
+}
+.THITHPT-div-p:hover{
+    color: #000;
+    transition: 0.75s;
 }
