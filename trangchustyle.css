@@ -189,9 +189,11 @@ a {
 }
 
 /* ===== TABS ===== */
+
 .tabs input[type="radio"] {
     display: none;
 }
+
 
 .tab-labels {
     display: flex;
@@ -199,25 +201,33 @@ a {
     gap: 20px;
 }
 
+
 .tab-labels label {
     cursor: pointer;
     transition: 0.3s;
     color: #777;
 }
 
+
 .tab-labels label:hover {
     color: #000;
 }
+
 
 /* Active tab */
 #tab-math:checked ~ .tab-labels [for="tab-math"],
 #tab-language:checked ~ .tab-labels [for="tab-language"],
 #tab-science:checked ~ .tab-labels [for="tab-science"],
 #tab-english:checked ~ .tab-labels [for="tab-english"],
-#tab-sample:checked ~ .tab-labels [for="tab-sample"] {
+#tab-sample:checked ~ .tab-labels [for="tab-sample"],
+#tab-math-tsa:checked ~ .tab-labels [for="tab-math-tsa"],
+#tab-speak-tsa:checked ~ .tab-labels [ for="tab-speak-tsa"],
+#tab-science-tsa:checked ~ .tab-labels [for="tab-science-tsa"],
+#tab-sample-tsa:checked ~ .tab-labels [for="tab-sample-tsa"]
+{
     color: #000;
     font-weight: 600;
-}
+} 
 
 /* ===== CONTENT ===== */
 .tab-content {
@@ -228,8 +238,7 @@ a {
 /* Ẩn tất cả */
 .tab-panel {
     display: none;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 /* Show theo tab */
@@ -239,6 +248,10 @@ a {
 #tab-english:checked ~ .tab-content .english { display: flex; }
 #tab-sample:checked ~ .tab-content .sample { display: flex; }
 
+#tab-math-tsa:checked ~ .tab-content .math-tsa { display: flex; }
+#tab-speak-tsa:checked ~ .tab-content .speak-tsa { display: flex; }
+#tab-science-tsa:checked ~ .tab-content .science-tsa { display: flex;}
+#tab-sample-tsa:checked ~ .tab-content .sample-tsa {display: flex;}
 /* ===== CARD ===== */
 .card {
     width: 250px;
@@ -261,10 +274,17 @@ a {
 .card:hover p {
     transform: translateY(-10px);
 }
-.TLTSA{
-    display: flex;
-}
+
 .TLTSA-div-h1{
     text-align: center;
-    padding-top: 100px ;
+    margin: 60px 0 40px;
+}
+.top{
+    background-color: rgb(248, 248, 248);
+}
+.hsa-section{
+    background-color: rgba(210, 237, 160, 0.499);
+}
+.TSA-section{
+    background-color: rgba(240, 203, 110, 0.478);
 }
