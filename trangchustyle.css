@@ -249,6 +249,7 @@ a {
 
 .hsa-tab-labels label,
 .tsa-tab-labels label,
+.VACT-tab-labels label, 
 .g12-tab-labels label,
 .g11-tab-labels label,
 .g10-tab-labels label {
@@ -262,6 +263,7 @@ a {
 
 .hsa-tab-labels label:hover,
 .tsa-tab-labels label:hover,
+.VACT-tab-lables label:hover,
 .g12-tab-labels label:hover,
 .g11-tab-labels label:hover,
 .g10-tab-labels label:hover {
@@ -399,7 +401,7 @@ a {
 }
 
 /* THPT Cards */
-.thpt-container {
+.thpt-container , .SPT-container  {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -408,6 +410,7 @@ a {
     height: auto;
     position: relative;
     z-index: 2;
+    justify-content: center;
 }
 
 .thpt-card {
