@@ -237,6 +237,7 @@ a {
 
 .hsa-tab-labels,
 .tsa-tab-labels,
+.VACT-tab-labels,
 .g12-tab-labels,
 .g11-tab-labels,
 .g10-tab-labels {
@@ -263,7 +264,7 @@ a {
 
 .hsa-tab-labels label:hover,
 .tsa-tab-labels label:hover,
-.VACT-tab-lables label:hover,
+.VACT-tab-labels label:hover,
 .g12-tab-labels label:hover,
 .g11-tab-labels label:hover,
 .g10-tab-labels label:hover {
@@ -280,6 +281,11 @@ a {
 #tsa-tab-language:checked ~ .tsa-tab-labels [for="tsa-tab-language"],
 #tsa-tab-science:checked ~ .tsa-tab-labels [for="tsa-tab-science"],
 #tsa-tab-sample:checked ~ .tsa-tab-labels [for="tsa-tab-sample"],
+#math-VACT:checked ~ .VACT-tab-labels [for="math-VACT"],
+#vietnam-VACT:checked ~ .VACT-tab-labels [for="vietnam-VACT"],
+#TA-VACT:checked ~ .VACT-tab-labels [for="TA-VACT"],
+#science-VACT:checked ~ .VACT-tab-labels [for="science-VACT"],
+#sample-VACT:checked ~ .VACT-tab-labels [for="sample-VACT"],
 #g12-tab-math:checked ~ .g12-tab-labels [for="g12-tab-math"],
 #g12-tab-language:checked ~ .g12-tab-labels [for="g12-tab-language"],
 #g12-tab-english:checked ~ .g12-tab-labels [for="g12-tab-english"],
