@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title || 'Tài liệu ôn thi - Đề thi thử' %></title>
+    <link rel="stylesheet" href="/css/trangchustyle.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="https://tailieuonthi.org/wp-content/uploads/2022/12/cropped-TLOT-1.png.webp" alt="Logo">
+            <h1>Tài liệu ôn thi</h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="/">Trang chủ</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Đánh giá năng lực <i class="fa fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#">Đánh giá năng lực ĐHQGHN (HSA)</a>
+                        <a href="#">Đánh giá tư duy Bách khoa (TSA)</a>
+                        <a href="#">Đánh giá năng lực TPHCM (VACT)</a>
+                        <a href="#">Đánh giá năng lực Sư phạm HN</a>
+                    </div>
+                </li>
+                <li><a href="#">Tài liệu THPT</a></li>
+                <li><a href="#">Đề thi tốt nghiệp</a></li>
+                <li><a href="#">Phòng luyện thi</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="search-container">
+        <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm tài liệu..." id="search-input">
+            <button type="submit" id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="HSA-section">
+            <h1 class="section-title">ĐÁNH GIÁ NĂNG LỰC ĐHQGHN (HSA)</h1>
+            <div class="tabs">
+                <input type="radio" name="hsa-tab" id="hsa-tab-math" checked>
+                <input type="radio" name="hsa-tab" id="hsa-tab-language">
+                <input type="radio" name="hsa-tab" id="hsa-tab-english">
+                <input type="radio" name="hsa-tab" id="hsa-tab-science">
+                <input type="radio" name="hsa-tab" id="hsa-tab-sample">
+
+                <div class="hsa-tab-labels">
+                    <label for="hsa-tab-math">Toán-logic-PTSL</label>
+                    <label for="hsa-tab-language">Tiếng Việt</label>
+                    <label for="hsa-tab-english">Tiếng Anh</label>
+                    <label for="hsa-tab-science">Khoa học</label>
+                    <label for="hsa-tab-sample">Đề minh họa</label>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-panel hsa-math">
+                        <% hsaMathDocuments.forEach(function(doc) { %>
+                        <div class="card">
+                            <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                            <p><%= doc.title %></p>
+                        </div>
+                        <% }); %>
+                    </div>
+                    <div class="tab-panel hsa-language">
+                        <% hsaLanguageDocuments.forEach(function(doc) { %>
+                        <div class="card">
+                            <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                            <p><%= doc.title %></p>
+                        </div>
+                        <% }); %>
+                    </div>
+                    <div class="tab-panel hsa-english">
+                        <% hsaEnglishDocuments.forEach(function(doc) { %>
+                        <div class="card">
+                            <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                            <p><%= doc.title %></p>
+                        </div>
+                        <% }); %>
+                    </div>
+                    <div class="tab-panel hsa-science">
+                        <% hsaScienceDocuments.forEach(function(doc) { %>
+                        <div class="card">
+                            <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                            <p><%= doc.title %></p>
+                        </div>
+                        <% }); %>
+                    </div>
+                    <div class="tab-panel hsa-sample">
+                        <% hsaSampleDocuments.forEach(function(doc) { %>
+                        <div class="card">
+                            <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                            <p><%= doc.title %></p>
+                        </div>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="TSA-section">
+            <h1 class="section-title">ĐÁNH GIÁ TƯ DUY BÁCH KHOA (TSA)</h1>
+            <div class="tabs">
+                <input type="radio" name="tsa-tab" id="tsa-tab-math" checked>
+                <input type="radio" name="tsa-tab" id="tsa-tab-language">
+                <input type="radio" name="tsa-tab" id="tsa-tab-english">
+                <input type="radio" name="tsa-tab" id="tsa-tab-science">
+                <input type="radio" name="tsa-tab" id="tsa-tab-sample">
+
+                <div class="tsa-tab-labels">
+                    <label for="tsa-tab-math">Toán-logic-PTSL</label>
+                    <label for="tsa-tab-language">Tiếng Việt</label>
+                    <label for="tsa-tab-english">Tiếng Anh</label>
+                    <label for="tsa-tab-science">Khoa học</label>
+                    <label for="tsa-tab-sample">Đề minh họa</label>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-panel tsa-math">
+                        <% tsaMathDocuments.forEach(function(doc) { %>
+                        <div class="card">
+                            <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                            <p><%= doc.title %></p>
+                        </div>
+                        <% }); %>
+                    </div>
+                    <div class="tab-panel tsa-language">
+                        <% tsaLanguageDocuments.forEach(function(doc) { %>
+                        <div class="card">
+                            <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                            <p><%= doc.title %></p>
+                        </div>
+                        <% }); %>
+                    </div>
+                    <div class="tab-panel tsa-english">
+                        <% tsaEnglishDocuments.forEach(function(doc) { %>
+                        <div class="card">
+                            <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                            <p><%= doc.title %></p>
+                        </div>
+                        <% }); %>
+                    </div>
+                    <div class="tab-panel tsa-science">
+                        <% tsaScienceDocuments.forEach(function(doc) { %>
+                        <div class="card">
+                            <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                            <p><%= doc.title %></p>
+                        </div>
+                        <% }); %>
+                    </div>
+                    <div class="tab-panel tsa-sample">
+                        <% tsaSampleDocuments.forEach(function(doc) { %>
+                        <div class="card">
+                            <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                            <p><%= doc.title %></p>
+                        </div>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="THPT-section">
+            <h1 class="section-title">TÀI LIỆU THPT (LỚP 10, 11, 12)</h1>
+            <div class="tabs">
+                <input type="radio" name="thpt-tab" id="thpt-tab-g12" checked>
+                <input type="radio" name="thpt-tab" id="thpt-tab-g11">
+                <input type="radio" name="thpt-tab" id="thpt-tab-g10">
+
+                <div class="thpt-tab-labels">
+                    <label for="thpt-tab-g12">Lớp 12</label>
+                    <label for="thpt-tab-g11">Lớp 11</label>
+                    <label for="thpt-tab-g10">Lớp 10</label>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-panel thpt-g12">
+                        <div class="subject-tabs">
+                            <input type="radio" name="g12-subject" id="g12-math" checked>
+                            <input type="radio" name="g12-subject" id="g12-language">
+                            <input type="radio" name="g12-subject" id="g12-english">
+                            <input type="radio" name="g12-subject" id="g12-physics">
+                            <input type="radio" name="g12-subject" id="g12-chemical">
+                            <input type="radio" name="g12-subject" id="g12-biological">
+                            <input type="radio" name="g12-subject" id="g12-history">
+                            <input type="radio" name="g12-subject" id="g12-geography">
+                            <input type="radio" name="g12-subject" id="g12-law">
+                            <input type="radio" name="g12-subject" id="g12-IT">
+
+                            <div class="g12-subject-labels">
+                                <label for="g12-math">Toán học</label>
+                                <label for="g12-language">Văn học</label>
+                                <label for="g12-english">Tiếng Anh</label>
+                                <label for="g12-physics">Vật lý</label>
+                                <label for="g12-chemical">Hóa học</label>
+                                <label for="g12-biological">Sinh học</label>
+                                <label for="g12-history">Lịch sử</label>
+                                <label for="g12-geography">Địa lý</label>
+                                <label for="g12-law">GDCD</label>
+                                <label for="g12-IT">Tin học</label>
+                            </div>
+
+                            <div class="subject-content">
+                                <div class="subject-panel g12-math">
+                                    <% g12MathDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g12-language">
+                                    <% g12LanguageDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g12-english">
+                                    <% g12EnglishDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g12-physics">
+                                    <% g12PhysicsDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g12-chemical">
+                                    <% g12ChemicalDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g12-biological">
+                                    <% g12BiologicalDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g12-history">
+                                    <% g12HistoryDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g12-geography">
+                                    <% g12GeographyDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g12-law">
+                                    <% g12LawDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g12-IT">
+                                    <% g12ITDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-panel thpt-g11">
+                        <div class="subject-tabs">
+                            <input type="radio" name="g11-subject" id="g11-math" checked>
+                            <input type="radio" name="g11-subject" id="g11-language">
+                            <input type="radio" name="g11-subject" id="g11-english">
+                            <input type="radio" name="g11-subject" id="g11-physics">
+                            <input type="radio" name="g11-subject" id="g11-chemical">
+                            <input type="radio" name="g11-subject" id="g11-biological">
+                            <input type="radio" name="g11-subject" id="g11-history">
+                            <input type="radio" name="g11-subject" id="g11-geography">
+                            <input type="radio" name="g11-subject" id="g11-law">
+                            <input type="radio" name="g11-subject" id="g11-IT">
+
+                            <div class="g11-subject-labels">
+                                <label for="g11-math">Toán học</label>
+                                <label for="g11-language">Văn học</label>
+                                <label for="g11-english">Tiếng Anh</label>
+                                <label for="g11-physics">Vật lý</label>
+                                <label for="g11-chemical">Hóa học</label>
+                                <label for="g11-biological">Sinh học</label>
+                                <label for="g11-history">Lịch sử</label>
+                                <label for="g11-geography">Địa lý</label>
+                                <label for="g11-law">GDCD</label>
+                                <label for="g11-IT">Tin học</label>
+                            </div>
+
+                            <div class="subject-content">
+                                <div class="subject-panel g11-math">
+                                    <% g11MathDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g11-language">
+                                    <% g11LanguageDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g11-english">
+                                    <% g11EnglishDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g11-physics">
+                                    <% g11PhysicsDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g11-chemical">
+                                    <% g11ChemicalDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g11-biological">
+                                    <% g11BiologicalDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g11-history">
+                                    <% g11HistoryDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g11-geography">
+                                    <% g11GeographyDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g11-law">
+                                    <% g11LawDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g11-IT">
+                                    <% g11ITDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-panel thpt-g10">
+                        <div class="subject-tabs">
+                            <input type="radio" name="g10-subject" id="g10-math" checked>
+                            <input type="radio" name="g10-subject" id="g10-language">
+                            <input type="radio" name="g10-subject" id="g10-english">
+                            <input type="radio" name="g10-subject" id="g10-physics">
+                            <input type="radio" name="g10-subject" id="g10-chemical">
+                            <input type="radio" name="g10-subject" id="g10-biological">
+                            <input type="radio" name="g10-subject" id="g10-history">
+                            <input type="radio" name="g10-subject" id="g10-geography">
+                            <input type="radio" name="g10-subject" id="g10-law">
+                            <input type="radio" name="g10-subject" id="g10-IT">
+
+                            <div class="g10-subject-labels">
+                                <label for="g10-math">Toán học</label>
+                                <label for="g10-language">Văn học</label>
+                                <label for="g10-english">Tiếng Anh</label>
+                                <label for="g10-physics">Vật lý</label>
+                                <label for="g10-chemical">Hóa học</label>
+                                <label for="g10-biological">Sinh học</label>
+                                <label for="g10-history">Lịch sử</label>
+                                <label for="g10-geography">Địa lý</label>
+                                <label for="g10-law">GDCD</label>
+                                <label for="g10-IT">Tin học</label>
+                            </div>
+
+                            <div class="subject-content">
+                                <div class="subject-panel g10-math">
+                                    <% g10MathDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g10-language">
+                                    <% g10LanguageDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g10-english">
+                                    <% g10EnglishDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g10-physics">
+                                    <% g10PhysicsDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g10-chemical">
+                                    <% g10ChemicalDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g10-biological">
+                                    <% g10BiologicalDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g10-history">
+                                    <% g10HistoryDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g10-geography">
+                                    <% g10GeographyDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g10-law">
+                                    <% g10LawDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div class="subject-panel g10-IT">
+                                    <% g10ITDocuments.forEach(function(doc) { %>
+                                    <div class="card">
+                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                        <p><%= doc.title %></p>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="VACT-section">
+            <h1 class="section-title">TÀI LIỆU ĐGNL TPHCM (VACT)</h1>
+            <div class="tabs">
+                <input type="radio" name="VACT" id="math-VACT" checked>
+                <input type="radio" name="VACT" id="vietnam-VACT">
+                <input type="radio" name="VACT" id="TA-VACT">
+                <input type="radio" name="VACT" id="science-VACT">
+                <input type="radio" name="VACT" id="sample-VACT">
+
+                <div class="VACT-tab-label">
+                    <label for="math-VACT">Toán-logic-PTSL</label>
+                    <label for="vietnam-VACT">Tiếng Việt</label>
+                    <label for="TA-VACT">Tiếng Anh</label>
+                    <label for="science-VACT">Khoa học</label>
+                    <label for="sample-VACT">Đề minh họa</label>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-panel vact-math">
+                        <% vactMathDocuments.forEach(function(doc) { %>
+                        <div class="card">
+                            <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                            <p><%= doc.title %></p>
+                        </div>
+                        <% }); %>
+                    </div>
+                    <div class="tab-panel vact-vietnam">
+                        <% vactVietnamDocuments.forEach(function(doc) { %>
+                        <div class="card">
+                            <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                            <p><%= doc.title %></p>
+                        </div>
+                        <% }); %>
+                    </div>
+                    <div class="tab-panel vact-english">
+                        <% vactEnglishDocuments.forEach(function(doc) { %>
+                        <div class="card">
+                            <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                            <p><%= doc.title %></p>
+                        </div>
+                        <% }); %>
+                    </div>
+                    <div class="tab-panel vact-science">
+                        <% vactScienceDocuments.forEach(function(doc) { %>
+                        <div class="card">
+                            <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                            <p><%= doc.title %></p>
+                        </div>
+                        <% }); %>
+                    </div>
+                    <div class="tab-panel vact-sample">
+                        <% vactSampleDocuments.forEach(function(doc) { %>
+                        <div class="card">
+                            <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                            <p><%= doc.title %></p>
+                        </div>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="shorting">
+            <img src="https://tailieuonthi.org/wp-content/uploads/2022/12/cropped-TLOT-1.png.webp" alt="">
+            <p>Website chia sẻ tài liệu ôn thi, đề thi thử các kỳ thi: Đánh giá tư duy TSA; Đánh giá năng lực HSA; Đánh giá năng lực TPHCM; Đánh giá năng lực ĐH Sư Phạm Hà Nội; kỳ thi tốt nghiệp THPT. <br> Cung cấp tài liệu nền tảng lớp 10, 11, 12 các môn học miễn phí.</p>
+        </div>
+        <div class="f-cate">
+            <h2>DANH MỤC TÀI LIỆU</h2>
+            <ul>
+                <li><a href="#">ĐÁNH GIÁ NĂNG LỰC ĐHQGHN (HSA)</a></li>
+                <li><a href="#">ĐÁNH GIÁ TƯ DUY BÁCH KHOA (TSA)</a></li>
+                <li><a href="#">ĐÁNH GIÁ NĂNG LỰC TPHCM (VACT)</a></li>
+                <li><a href="#">ĐÁNH GIÁ NĂNG LỰC SƯ PHẠM HN</a></li>
+                <li><a href="#">TÀI LIỆU THPT (LỚP 10, 11, 12)</a></li>
+                <li><a href="#">ĐỀ THI TỐT NGHIỆP THPT</a></li>
+            </ul>
+        </div>
+        <div class="more">
+            <h2>Các trang hữu ích</h2>
+            <ul>
+                <li><a href="#">PHÒNG LUYỆN THI ĐGNL HSA</a></li>
+                <li><a href="#">PHÒNG LUYỆN THI ĐGTD TSA</a></li>
+                <li><a href="#">THÔNG TIN TUYỂN SINH ĐẠI HỌC</a></li>
+                <li><a href="#">ĐIỂM TRÚNG TUYỂN ĐẠI HỌC</a></li>
+                <li><a href="#">GIỚI THIỆU - LIÊN HỆ</a></li>
+                <li><a href="#">CHÍNH SÁCH - ĐIỀU KHOẢN</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

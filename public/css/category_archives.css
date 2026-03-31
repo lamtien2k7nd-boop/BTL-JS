@@ -61,16 +61,30 @@
     display: flex;
     justify-content: center;
     gap: 10px;
+    align-items: center;
 }
-.pages div{
+.page-btn{
     border: 2px solid orange;
-    padding: 10px;
-    border-radius: 100px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: white;
+    color: orange;
+    cursor: pointer;
     transition: 0.2s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
 }
-.pages div:hover{
+.page-btn:hover{
     color: white;
     background-color: orange;
+}
+.page-btn.active{
+    background-color: orange;
+    color: white;
+}
+.pages span{
+    margin: 0 5px;
+    color: orange;
 }
 .searchbox {
     display: flex;
@@ -92,4 +106,8 @@
 .search-input-button {
     padding-left: 5px;
     width: 3vw;
+}
+.search-input-button i {
+    /* color: orange; */
+    font-size: 1.2rem;
 }
