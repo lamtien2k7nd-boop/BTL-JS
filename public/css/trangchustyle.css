@@ -74,12 +74,13 @@
     color:#6d6d6d;
 }
 
-.cate-data {
+.cate-data a {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px;
     transition: ease 0.4s;
+    color:#5a6470;
 }
 
 .cate-data-img {
@@ -106,7 +107,7 @@
     font-size: clamp(0.75rem, 2vw, 1rem);
 }
 
-.cate-data:hover {
+.cate-data a:hover {
     color:#000;
     transform: translateY(-10px);
 }
@@ -280,15 +281,44 @@
 #g10-tab-law:checked ~ .tab-content .g10-law,
 #g10-tab-IT:checked ~ .tab-content .g10-IT {
     display: flex;
+    align-items: center;
+    gap:10px;
+    width: 70vw;
+    margin: 0 auto;
 }
+
+.hsa-math{
+    display:flex;
+    align-items: center;
+    gap:10px;
+    width: 70vw;
+    margin: 0 auto;
+}
+.viewport{
+    width: 100%;
+    overflow: hidden;
+}
+.track{
+    display:flex;
+    transition: ease 0.5s;
+}
+/* .hsa-math .card{
+    min-width: 22%;
+    padding:20px;
+    background: #eee;
+    border: 1px solid #ccc;
+} */
 
 /* ========== CARDS ========== */
 .card {
-    width: 250px;
+    /* width: 250px; */
+    min-width: 25%;
     margin: 10px;
     text-align: center;
     position: relative;
     z-index: 2;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .card img {
@@ -306,8 +336,46 @@
     transform: translateY(-10px);
 }
 
+/* ==========CHANGING CAROUSEL TO CARDS========== */
+.tabs button{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:white;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+    transition: 0.3s ease;
+    visibility: hidden;
+    opacity: 0;
+    height: 100%;
+    
+}
+.tabs:hover button{
+    visibility: visible;
+    opacity: 1;
+}
+.SPT-container button{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:white;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+    transition: 0.3s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+.SPT-container:hover button{
+    visibility: visible;
+    opacity: 1;
+}
+/* ==========SPT CARDS=========== */
+.SPT-section {
+    display:flex;
+    flex-direction: column;
+}
 /* THPT Cards */
-.thpt-container , .SPT-container  {
+.thpt-container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -317,6 +385,26 @@
     position: relative;
     z-index: 2;
     justify-content: center;
+}
+
+.SPT-container {
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.SPT-section .viewport {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.SPT-section .track {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    gap: 20px;
 }
 
 .thpt-card {
