@@ -115,16 +115,16 @@
 /* ========== SECTIONS ========== */
 .hsa-section,
 .thpt-section,
-.g12-section {
-    background-color: #E9E9E9;
+.g12-section,
+.g10-section  {
+    background-color: #fafafa;
     padding: 20px;
     position: relative;
     z-index: 1;
 }
 
 .tsa-section,
-.g11-section,
-.g10-section {
+.g11-section{
     background-color: #ffffff;
     padding: 20px;
     position: relative;
@@ -221,6 +221,7 @@
     font-weight: 600;
     border: 3px solid #fd883a;
     border-radius: 30px;
+    background-color: white;
 }
 
 /* ========== TAB CONTENT ========== */
@@ -229,71 +230,81 @@
     margin: 20px auto;
     position: relative;
     z-index: 3;
+    overflow: hidden;
 }
+
+.tab-slider {
+    display: flex;
+    width: 500%;
+    transition: transform 0.5s ease;
+}
+
+.hsa-section .tab-slider { width: 500%; } /* 5 tabs */
+.tsa-section .tab-slider { width: 400%; } /* 4 tabs */
+.g12-section .tab-slider { width: 1000%; } /* 10 tabs */
+.g11-section .tab-slider { width: 1000%; } /* 10 tabs */
+.g10-section .tab-slider { width: 1000%; } /* 10 tabs */
 
 .tab-panel {
-    display: none;
+    width: 20%;
     justify-content: space-evenly;
-}
-
-/* HSA Tab Content */
-#hsa-tab-math:checked ~ .tab-content .hsa-math,
-#hsa-tab-language:checked ~ .tab-content .hsa-language,
-#hsa-tab-science:checked ~ .tab-content .hsa-science,
-#hsa-tab-english:checked ~ .tab-content .hsa-english,
-#hsa-tab-sample:checked ~ .tab-content .hsa-sample,
-/* TSA Tab Content */
-#tsa-tab-math:checked ~ .tab-content .tsa-math,
-#tsa-tab-language:checked ~ .tab-content .tsa-language,
-#tsa-tab-science:checked ~ .tab-content .tsa-science,
-#tsa-tab-sample:checked ~ .tab-content .tsa-sample,
-/* G12 Tab Content */
-#g12-tab-math:checked ~ .tab-content .g12-math,
-#g12-tab-language:checked ~ .tab-content .g12-language,
-#g12-tab-english:checked ~ .tab-content .g12-english,
-#g12-tab-physics:checked ~ .tab-content .g12-physics,
-#g12-tab-chemical:checked ~ .tab-content .g12-chemical,
-#g12-tab-biological:checked ~ .tab-content .g12-biological,
-#g12-tab-history:checked ~ .tab-content .g12-history,
-#g12-tab-geography:checked ~ .tab-content .g12-geography,
-#g12-tab-law:checked ~ .tab-content .g12-law,
-#g12-tab-IT:checked ~ .tab-content .g12-IT,
-/* G11 Tab Content */
-#g11-tab-math:checked ~ .tab-content .g11-math,
-#g11-tab-language:checked ~ .tab-content .g11-language,
-#g11-tab-english:checked ~ .tab-content .g11-english,
-#g11-tab-physics:checked ~ .tab-content .g11-physics,
-#g11-tab-chemical:checked ~ .tab-content .g11-chemical,
-#g11-tab-biological:checked ~ .tab-content .g11-biological,
-#g11-tab-history:checked ~ .tab-content .g11-history,
-#g11-tab-geography:checked ~ .tab-content .g11-geography,
-#g11-tab-law:checked ~ .tab-content .g11-law,
-#g11-tab-IT:checked ~ .tab-content .g11-IT,
-/* G10 Tab Content */
-#g10-tab-math:checked ~ .tab-content .g10-math,
-#g10-tab-language:checked ~ .tab-content .g10-language,
-#g10-tab-english:checked ~ .tab-content .g10-english,
-#g10-tab-physics:checked ~ .tab-content .g10-physics,
-#g10-tab-chemical:checked ~ .tab-content .g10-chemical,
-#g10-tab-biological:checked ~ .tab-content .g10-biological,
-#g10-tab-history:checked ~ .tab-content .g10-history,
-#g10-tab-geography:checked ~ .tab-content .g10-geography,
-#g10-tab-law:checked ~ .tab-content .g10-law,
-#g10-tab-IT:checked ~ .tab-content .g10-IT {
     display: flex;
     align-items: center;
     gap:10px;
-    width: 70vw;
     margin: 0 auto;
 }
 
-.hsa-math{
-    display:flex;
-    align-items: center;
-    gap:10px;
-    width: 70vw;
-    margin: 0 auto;
-}
+.hsa-section .tab-panel { width: 20%; }
+.tsa-section .tab-panel { width: 25%; }
+.g12-section .tab-panel,
+.g11-section .tab-panel,
+.g10-section .tab-panel { width: 10%; }
+
+/* HSA Tab Content */
+#hsa-tab-math:checked ~ .tab-content .tab-slider { transform: translateX(0); }
+#hsa-tab-language:checked ~ .tab-content .tab-slider { transform: translateX(-20%); }
+#hsa-tab-english:checked ~ .tab-content .tab-slider { transform: translateX(-40%); }
+#hsa-tab-science:checked ~ .tab-content .tab-slider { transform: translateX(-60%); }
+#hsa-tab-sample:checked ~ .tab-content .tab-slider { transform: translateX(-80%); }
+/* TSA Tab Content */
+#tsa-tab-math:checked ~ .tab-content .tab-slider { transform: translateX(0); }
+#tsa-tab-language:checked ~ .tab-content .tab-slider { transform: translateX(-25%); }
+#tsa-tab-science:checked ~ .tab-content .tab-slider { transform: translateX(-50%); }
+#tsa-tab-sample:checked ~ .tab-content .tab-slider { transform: translateX(-75%); }
+/* G12 Tab Content */
+#g12-tab-math:checked ~ .tab-content .tab-slider { transform: translateX(0); }
+#g12-tab-language:checked ~ .tab-content .tab-slider { transform: translateX(-10%); }
+#g12-tab-english:checked ~ .tab-content .tab-slider { transform: translateX(-20%); }
+#g12-tab-physics:checked ~ .tab-content .tab-slider { transform: translateX(-30%); }
+#g12-tab-chemical:checked ~ .tab-content .tab-slider { transform: translateX(-40%); }
+#g12-tab-biological:checked ~ .tab-content .tab-slider { transform: translateX(-50%); }
+#g12-tab-history:checked ~ .tab-content .tab-slider { transform: translateX(-60%); }
+#g12-tab-geography:checked ~ .tab-content .tab-slider { transform: translateX(-70%); }
+#g12-tab-law:checked ~ .tab-content .tab-slider { transform: translateX(-80%); }
+#g12-tab-IT:checked ~ .tab-content .tab-slider { transform: translateX(-90%); }
+/* G11 Tab Content */
+#g11-tab-math:checked ~ .tab-content .tab-slider { transform: translateX(0); }
+#g11-tab-language:checked ~ .tab-content .tab-slider { transform: translateX(-10%); }
+#g11-tab-english:checked ~ .tab-content .tab-slider { transform: translateX(-20%); }
+#g11-tab-physics:checked ~ .tab-content .tab-slider { transform: translateX(-30%); }
+#g11-tab-chemical:checked ~ .tab-content .tab-slider { transform: translateX(-40%); }
+#g11-tab-biological:checked ~ .tab-content .tab-slider { transform: translateX(-50%); }
+#g11-tab-history:checked ~ .tab-content .tab-slider { transform: translateX(-60%); }
+#g11-tab-geography:checked ~ .tab-content .tab-slider { transform: translateX(-70%); }
+#g11-tab-law:checked ~ .tab-content .tab-slider { transform: translateX(-80%); }
+#g11-tab-IT:checked ~ .tab-content .tab-slider { transform: translateX(-90%); }
+/* G10 Tab Content */
+#g10-tab-math:checked ~ .tab-content .tab-slider { transform: translateX(0); }
+#g10-tab-language:checked ~ .tab-content .tab-slider { transform: translateX(-10%); }
+#g10-tab-english:checked ~ .tab-content .tab-slider { transform: translateX(-20%); }
+#g10-tab-physics:checked ~ .tab-content .tab-slider { transform: translateX(-30%); }
+#g10-tab-chemical:checked ~ .tab-content .tab-slider { transform: translateX(-40%); }
+#g10-tab-biological:checked ~ .tab-content .tab-slider { transform: translateX(-50%); }
+#g10-tab-history:checked ~ .tab-content .tab-slider { transform: translateX(-60%); }
+#g10-tab-geography:checked ~ .tab-content .tab-slider { transform: translateX(-70%); }
+#g10-tab-law:checked ~ .tab-content .tab-slider { transform: translateX(-80%); }
+#g10-tab-IT:checked ~ .tab-content .tab-slider { transform: translateX(-90%); }
+
 .viewport{
     width: 100%;
     overflow: hidden;
@@ -302,12 +313,6 @@
     display:flex;
     transition: ease 0.5s;
 }
-/* .hsa-math .card{
-    min-width: 22%;
-    padding:20px;
-    background: #eee;
-    border: 1px solid #ccc;
-} */
 
 /* ========== CARDS ========== */
 .card {
@@ -331,9 +336,13 @@
     transition: 0.4s ease;
 }
 
-.card:hover img,
-.card:hover p {
+.card:hover img{
     transform: translateY(-10px);
+}
+.card:hover p {
+    transform: translateY(-30px);
+    background-color: #ffffff;
+    /* padding: 5px; */
 }
 
 /* ==========CHANGING CAROUSEL TO CARDS========== */
@@ -392,12 +401,15 @@
     padding: 20px;
     position: relative;
     z-index: 2;
+    display: flex;
+    justify-content: center;
 }
 
 .SPT-section .viewport {
     display: flex;
     align-items: center;
     gap: 10px;
+    width: 90%
 }
 
 .SPT-section .track {

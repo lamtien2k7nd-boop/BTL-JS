@@ -64,13 +64,15 @@ function carousel(){
 
         function update() {
             if (cards.length === 0) return;
-            const cardWidth = cards[0].offsetWidth;
+            const cardStyle = getComputedStyle(cards[0]);
+            const cardWidth = cards[0].offsetWidth +
+                parseFloat(cardStyle.marginLeft) +
+                parseFloat(cardStyle.marginRight);
             const offset = index * cardWidth;
             track.style.transform = `translateX(-${offset}px)`;
         }
     });
 }
-
 function run(){
     dropdown();
     carousel();
