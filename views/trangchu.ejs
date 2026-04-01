@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title || 'Tài liệu ôn thi - Đề thi thử' %></title>
-    <link rel="stylesheet" href="/css/trangchustyle.css">
+    <title><%= typeof title !== 'undefined' ? title : 'Tài liệu ôn thi - Đề thi thử' %></title>
+    <link rel="stylesheet" href="/css/trangchu.css">
     <link rel="stylesheet" href="/css/base.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,130 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="top">
-        <div class="logo">
-            <a href="trangchu.html"><img src="https://tailieuonthi.org/wp-content/uploads/2022/12/cropped-TLOT-1.png.webp"></a>
-        </div>  
-    </div>
-    <ul class="nav-menu">
-        <li class="dropdown"><a href="trangchu.html">Trang chủ</a></li>
-    
-        <li class="dropdown">
-            <a href="#">Đề TN THPT</a><i class="fa fa-chevron-down"></i>
-            <div class="dropdown-content">
-                <div class="drop-data">
-                    <h3>Môn Toán</h3>
-                    <a href="#">Toán 12</a>
-                    <a href="#">Toán 11</a>
-                    <a href="#">Toán 10</a>
-                    <a href="#">Đề minh họa</a>
-                </div>
-                <div class="drop-data">
-                    <h3>Môn Vật lý</h3>
-                    <a href="#">Vật lý 12</a>
-                    <a href="#">Vật lý 11</a>
-                    <a href="#">Vật lý 10</a>
-                    <a href="#">Đề minh họa</a>
-                </div>
-                <div class="drop-data">
-                    <h3>Môn Hóa học</h3>
-                    <a href="#">Hóa học 12</a>
-                    <a href="#">Hóa học 11</a>
-                    <a href="#">Hóa học 10</a>
-                    <a href="#">Đề minh họa</a>
-                </div>
-                <div class="drop-data">
-                    <h3>Môn Sinh học</h3>
-                    <a href="#">Sinh học 12</a>
-                    <a href="#">Sinh học 11</a>
-                    <a href="#">Sinh học 10</a>
-                    <a href="#">Đề minh họa</a>
-                </div>
-                <div class="drop-data">
-                    <h3>Môn Tin học</h3>
-                    <a href="#">Tin học 12</a>
-                    <a href="#">Tin học 11</a>
-                    <a href="#">Tin học 10</a>
-                    <a href="#">Đề minh họa</a>
-                </div>
-
-                <div class="drop-data">
-                    <h3>Ngữ văn</h3>
-                    <a href="#">Ngữ văn 12</a>
-                    <a href="#">Ngữ văn 11</a>
-                    <a href="#">Ngữ văn 10</a>
-                    <a href="#">Đề minh họa</a>
-                </div>
-                <div class="drop-data">
-                    <h3>Tiếng Anh</h3>
-                    <a href="#">Tiếng Anh 12</a>
-                    <a href="#">Tiếng Anh 11</a>
-                    <a href="#">Tiếng Anh 10</a>
-                    <a href="#">Đề minh họa</a>
-                </div>
-                <div class="drop-data">
-                    <h3>Lịch sử</h3>
-                    <a href="#">Lịch sử 12</a>
-                    <a href="#">Lịch sử 11</a>
-                    <a href="#">Lịch sử 10</a>
-                    <a href="#">Đề minh họa</a>
-                </div>
-                <div class="drop-data">
-                    <h3>Địa lý</h3>
-                    <a href="#">Địa lý 12</a>
-                    <a href="#">Địa lý 11</a>
-                    <a href="#">Địa lý 10</a>
-                    <a href="#">Đề minh họa</a>
-                </div>
-                <div class="drop-data">
-                    <h3>GD KT & PL</h3>
-                    <a href="#">Lớp 12</a>
-                    <a href="#">Lớp 11</a>
-                    <a href="#">Lớp 10</a>
-                    <a href="#">Đề minh họa</a>
-                </div>
-            </div>
-        </li>
-
-        <li class="dropdown">
-            <a href="#">Đề ĐGTD</a><i class="fa fa-chevron-down"></i>
-            <div class="dropdown-content">
-                <div class="drop-data">
-                    <a href="#">Toán học</a>
-                    <a href="#">Đọc hiểu</a>
-                    <a href="#">Khoa học</a>
-                    <a href="#">Đề minh họa</a>
-                </div>
-            </div>
-        </li>
-
-        <li class="dropdown">
-            <a class="dropdown-btn" href="#">Đề ĐGNL</a><i class="fa fa-chevron-down dropdown-icon"></i>
-            <div class="dropdown-content">
-                <div class="drop-data">
-                    <h3>ĐGNL ĐHQG HN</h3>
-                    <a href="#">Định lượng</a>
-                    <a href="#">Định tính</a>
-                    <a href="#">Khoa học</a>
-                    <a href="#">Đề minh họa</a>
-                </div>
-                <div class="drop-data">
-                    <h3>ĐGNL ĐHQG HCM</h3>
-                    <a href="#">Ngôn ngữ</a>
-                    <a href="#">Toán học</a>
-                    <a href="#">Khoa học</a>
-                    <a href="#">Đề minh họa</a>
-                </div>
-                <div class="drop-data">
-                    <h3>ĐGNL ĐHQG HCM</h3>
-                    <a href="#">Ngôn ngữ</a>
-                    <a href="#">Toán học</a>
-                    <a href="#">Khoa học</a>
-                    <a href="#">Đề minh họa</a>
-                </div>
-            </div>
-        </li>
-    </ul>
+    <%-include('partials/header')%>
     <div class="container">
         <div class="search">
             <div class="s-title">
@@ -200,78 +77,43 @@
         <div class="hsa-section">
             <h1 class="section-title">TÀI LIỆU ĐGNL HSA</h1>
             <div class="tabs">
-                <input type="radio" name="hsa-tab" id="hsa-tab-math" checked>
-                <input type="radio" name="hsa-tab" id="hsa-tab-language">
-                <input type="radio" name="hsa-tab" id="hsa-tab-science">
-                <input type="radio" name="hsa-tab" id="hsa-tab-english">
-                <input type="radio" name="hsa-tab" id="hsa-tab-sample">
-
+                <% hsaData.forEach(function(subject, index) {%>
+                <input type="radio" 
+                    name="hsa-tab" 
+                    id="hsa-tab-<%=subject.id%>"
+                    <%= index === 0 ? 'checked' : '' %>
+                >
+                <% }); %>
                 <div class="hsa-tab-labels">
-                    <label for="hsa-tab-math">Toán học</label>
-                    <label for="hsa-tab-language">Ngôn ngữ & Văn học</label>
-                    <label for="hsa-tab-science">Tiếng Anh</label>
-                    <label for="hsa-tab-english">Khoa học</label>
-                    <label for="hsa-tab-sample">Đề minh họa</label>
+                    <% hsaData.forEach(function(subject, index) { %>
+                        <label for="hsa-tab-<%= subject.id %>">
+                            <%= subject.name %>
+                        </label>
+                    <% }); %>
                 </div>
+                
                 <div class="tab-content">
                     <div class="tab-slider">
-                    
-                        <div class="tab-panel hsa-math">                            
-                            <button class="prev">&lt;</button>                            
-                            <div class="viewport">
-                                <div class="track" id="track">
-                                    <% hsaMathDocuments.forEach(function(doc) { %>
-                                    <div class="card">
-                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
-                                        <p><%= doc.title %></p>
+                        <% hsaData.forEach(function(subject) { %>
+                            <div class="tab-panel hsa-<%= subject.id %>">                            
+                                <button class="prev">&lt;</button>                            
+                                
+                                <div class="viewport">
+                                    <div class="track">
+                                        
+                                        <% subject.documents.forEach(function(doc) { %>
+                                            <div class="card">
+                                                <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                                <p><%= doc.title %></p>
+                                            </div>
+                                        <% }); %>
+
                                     </div>
-                                    <% }); %>
-                                </div>
-                            </div>                            
-                            <button class="next">&gt;</button>
-                        </div>
-                        <div class="tab-panel hsa-language">                            
-                            <button class="prev">&lt;</button>                            
-                            <div class="viewport">
-                                <div class="track" id="track">
-                                    <% hsaLanguageDocuments.forEach(function(doc) { %>
-                                    <div class="card">
-                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
-                                        <p><%= doc.title %></p>
-                                    </div>
-                                    <% }); %>
-                                </div>
-                            </div>                            
-                            <button class="next">&gt;</button>
-                        </div>
-                        <div class="tab-panel hsa-english">                            
-                            <button class="prev">&lt;</button>                            
-                            <div class="viewport">
-                                <div class="track" id="track">
-                                    <% hsaEnglishDocuments.forEach(function(doc) { %>
-                                    <div class="card">
-                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
-                                        <p><%= doc.title %></p>
-                                    </div>
-                                    <% }); %>
-                                </div>
-                            </div>                            
-                            <button class="next">&gt;</button>
-                        </div>
-                        <div class="tab-panel hsa-science">                            
-                            <button class="prev">&lt;</button>                            
-                            <div class="viewport">
-                                <div class="track" id="track">
-                                    <% hsaScienceDocuments.forEach(function(doc) { %>
-                                    <div class="card">
-                                        <img src="<%= doc.image %>" alt="<%= doc.title %>">
-                                        <p><%= doc.title %></p>
-                                    </div>
-                                    <% }); %>
-                                </div>
-                            </div>                            
-                            <button class="next">&gt;</button>
-                        </div>
+                                </div>                            
+                                
+                                <button class="next">&gt;</button>
+                            </div>
+                        <% }); %>
                     </div>
                 </div>
             </div>
@@ -279,122 +121,121 @@
         <div class="tsa-section">
             <h1 class="section-title">TÀI LIỆU ĐGTD TSA</h1>
             <div class="tabs">
-                <input type="radio" name="tsa-tab" id="tsa-tab-math" checked>
-                <input type="radio" name="tsa-tab" id="tsa-tab-language">
-                <input type="radio" name="tsa-tab" id="tsa-tab-science">
-                <input type="radio" name="tsa-tab" id="tsa-tab-sample">
-
+                <% tsaData.forEach(function(subject, index) {%>
+                    <input type="radio" 
+                    name="tsa-tab" 
+                    id="tsa-tab-<%subject.id%>"
+                    <%= index === 0 ? 'checked' : '' %>
+                    >
+                <% }); %>
                 <div class="tsa-tab-labels">
-                    <label for="tsa-tab-math">Toán học</label>
-                    <label for="tsa-tab-language">Đọc hiểu</label>
-                    <label for="tsa-tab-science">Khoa học</label>
-                    <label for="tsa-tab-sample">Đề minh họa</label>
+                    <% tsaData.forEach(function(subject) { %>
+                        <label for="tsa-tab-<%= subject.id %>">
+                            <%= subject.name %>
+                        </label>
+                    <% }); %>
                 </div>
                 
                 <div class="tab-content">
                     <div class="tab-slider">
+                        <% tsaData.forEach(function(subject) { %>
+                            <div class="tab-panel tsa-<%= subject.id %>">                            
+                                <button class="prev">&lt;</button>                            
+                                
+                                <div class="viewport">
+                                    <div class="track">
+                                        
+                                        <% subject.documents.forEach(function(doc) { %>
+                                            <div class="card">
+                                                <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                                                <p><%= doc.title %></p>
+                                            </div>
+                                        <% }); %>
 
-                    <div class="tab-panel tsa-math">
-                        <button class="prev">&lt;</button>
-                        <div class="viewport">
-                            <div class="track" id="track">
-                                <% tsaMathDocuments.forEach(function(doc) { %>
-                                <div class="card">
-                                    <img src="<%= doc.image %>" alt="<%= doc.title %>">
-                                    <p><%= doc.title %></p>
-                                </div>
-                                <% }); %>                                
+                                    </div>
+                                </div>                            
+                                
+                                <button class="next">&gt;</button>
                             </div>
-                        </div>
-                        <button class="next">></button>
-                    </div>
-
-                    <div class="tab-panel tsa-language">
-                        <button class="prev">&lt;</button>
-                        <div class="viewport">
-                            <div class="track" id="track">
-                                <% tsaLanguageDocuments.forEach(function(doc) { %>
-                                <div class="card">
-                                    <img src="<%= doc.image %>" alt="<%= doc.title %>">
-                                    <p><%= doc.title %></p>
-                                </div>
-                                <% }); %>                                
-                            </div>
-                        </div>
-                        <button class="next">&gt;</button>
-                    </div>
-
-                    <div class="tab-panel tsa-science">
-                        <button class="prev">&lt;</button>
-                        <div class="viewport">
-                            <div class="track" id="track">
-                                <% tsaScienceDocuments.forEach(function(doc) { %>
-                                <div class="card">
-                                    <img src="<%= doc.image %>" alt="<%= doc.title %>">
-                                    <p><%= doc.title %></p>
-                                </div>
-                                <% }); %>                                
-                            </div>
-                        </div>
-                        <button class="next">&gt;</button>
-                    </div>
-
-                    <div class="tab-panel tsa-sample">
-                        <button class="prev">&lt;</button>
-                        <div class="viewport">
-                            <div class="track" id="track">
-                                <div class="card">
-                                    <img src="https://tailieuonthi.org/wp-content/uploads/2026/01/15-696213d9e9756-768x384.webp" alt="">
-                                    <p>Đề minh họa 1</p>
-                                </div>
-                                <div class="card">
-                                    <img src="https://tailieuonthi.org/wp-content/uploads/2026/01/15-696213d9e9756-768x384.webp" alt="">
-                                    <p>Đề minh họa 1</p>
-                                </div>
-                                <div class="card">
-                                    <img src="https://tailieuonthi.org/wp-content/uploads/2026/01/15-696213d9e9756-768x384.webp" alt="">
-                                    <p>Đề minh họa 1</p>
-                                </div>
-                                <div class="card">
-                                    <img src="https://tailieuonthi.org/wp-content/uploads/2026/01/15-696213d9e9756-768x384.webp" alt="">
-                                    <p>Đề minh họa 1</p>
-                                </div>    
-                            </div>
-                        </div>
-                        <button class="next">&gt;</button>                    
-                    </div>
+                        <% }); %>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="thpt-section">
+            <h1 class="section-title">Tài liệu ôn thi TNTHPT</h1>
+            <div class="thpt-container">
+                <% thptDocuments.forEach(function(doc) { %>
+                <div class="thpt-card">
+                    <img src="<%= doc.image %>" alt="<%= doc.title %>">
+                    <p><%= doc.title %></p>
+                    <h2><%= doc.description %></h2>
+                </div>
+                <% }); %>
+            </div>
+        </div>
+        <div class="SPT-section">
+            <h1 class="section-title">TÀI LIỆU ĐGNL SƯ PHẠM HÀ NỘI (SPT)</h1>
+            <div class="SPT-container">
+                <div class="viewport">
+                    <button class="prev"><</button>
+                    <div class="track" id="track">
+                        <% sptDocuments.forEach(function(doc) { %>
+                        <div class="card">
+                            <img style="height: 250px; width: auto;" src="<%= doc.image %>" alt="<%= doc.title %>">
+                            <p><%= doc.title %></p>
+                        </div>
+                        <% }); %>
+                    </div>
+                    <button class="next">></button>
+                </div>
+            </div>
+        </div>
+        <% data.forEach(function(grade) { %>
+        <div class="g<%=grade.grade%>-section">
+            <div class="tabs">
+                <% grade.subjects.forEach(function(subject, index) { %>
+                    <input type="radio" 
+                    name="g<%=grade.grade%>-tab" 
+                    id="g<%=grade.grade%>-tab-<%= subject.id %>"
+                    <%= index === 0 ? 'checked' : '' %>
+                    >
+                <% }); %>
+                <div class="g<%=grade.grade%>-tab-labels">
+                    <% grade.subjects.forEach(function(subject) { %>
+                        <label for="g<%=grade.grade%>-tab-<%= subject.id %>">
+                            <%= subject.name %>
+                        </label>
+                    <% }); %>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-slider">
+
+                        <% grade.subjects.forEach(function(subject) { %>
+                            <div class="tab-panel g<%= grade.grade %>-<%= subject.id %>">
+
+                                <button class="prev">&lt;</button>
+                                <div class="viewport">
+                                    <div class="track">
+                                        <% subject.documents.forEach(function(doc) { %>
+                                            <div class="card">
+                                                <img src="<%= doc.image %>" alt="">
+                                                <p><%= doc.title %></p>
+                                            </div>
+                                        <% }); %>
+                                    </div>
+                                </div>
+                                <button class="next">&gt;</button>
+                            </div>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% }); %>
+        
     </div>
-    <div class="footer">
-        <div class="shorting">
-            <img src="https://tailieuonthi.org/wp-content/uploads/2022/12/cropped-TLOT-1.png.webp" alt="">
-            <p>Website chia sẻ tài liệu ôn thi, đề thi thử các kỳ thi: Đánh giá tư duy TSA; Đánh giá năng lực HSA; Đánh giá năng lực TPHCM; Đánh giá năng lực ĐH Sư Phạm Hà Nội; kỳ thi tốt nghiệp THPT. <br> Cung cấp tài liệu nền tảng lớp 10, 11, 12 các môn học miễn phí.</p>
-        </div>
-        <div class="f-cate">
-            <h2>DANH MỤC TÀI LIỆU</h2>
-            <ul>
-                <li><a href="#">ĐÁNH GIÁ NĂNG LỰC ĐHQGHN (HSA)</a></li>
-                <li><a href="#">ĐÁNH GIÁ TƯ DUY BÁCH KHOA (TSA)</a></li>
-                <li><a href="#">ĐÁNH GIÁ NĂNG LỰC TPHCM (VACT)</a></li>
-                <li><a href="#">ĐÁNH GIÁ NĂNG LỰC SƯ PHẠM HN</a></li>
-                <li><a href="#">TÀI LIỆU THPT (LỚP 10, 11, 12)</a></li>
-                <li><a href="#">ĐỀ THI TỐT NGHIỆP THPT</a></li>
-            </ul>
-        </div>
-        <div class="more">
-            <h2>Các trang hữu ích</h2>
-            <ul>
-                <li><a href="#">PHÒNG LUYỆN THI ĐGNL HSA</a></li>
-                <li><a href="#">PHÒNG LUYỆN THI ĐGTD TSA</a></li>
-                <li><a href="#">THÔNG TIN TUYỂN SINH ĐẠI HỌC</a></li>
-                <li><a href="#">ĐIỂM TRÚNG TUYỂN ĐẠI HỌC</a></li>
-                <li><a href="#">GIỚI THIỆU - LIÊN HỆ</a></li>
-                <li><a href="#">CHÍNH SÁCH - ĐIỀU KHOẢN</a></li>
-            </ul>
-        </div>
-    </div>
+    <%- include('partials/footer')%>
+    <script src="/js/app.js"></script>
 </body>
 </html>

@@ -86,7 +86,7 @@ a {
 }
 
 .drop-data h3 {
-    font-size: 1vw;
+    font-size: 0.8vw;
     color: #000;
     border-bottom: 0.125rem solid #eee;
     padding-bottom: 0.625rem;
@@ -97,7 +97,7 @@ a {
     padding: 5px;
     color: #666;
     font-weight: normal;
-    font-size: 0.9vw;
+    font-size: 0.7vw;
     transition: 0.5s;
 }
 
