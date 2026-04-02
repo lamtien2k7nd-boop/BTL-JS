@@ -43,27 +43,36 @@ a {
     color: #333;
     padding: 0.625rem;
 }
+.dropdown:hover{
+    cursor:pointer;
+}
 
 .dropdown-content {
     display: flex;
     gap: 10px;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+
     background-color: #fff;
     width: max-content;
     box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
     padding: 1.25rem;
     z-index: 100;
     border-radius: 0.25rem;
-    transition: all 0.2s ease-in-out;
+
+    top: 100%;
+    left: 50%;
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+
     opacity: 0;
     visibility: hidden;
-    transform: translateX(-50%) scale(0.8);
+
+    transition: 0.2s;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown-content.show {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) scale(1);
@@ -72,10 +81,12 @@ a {
 .drop-data {
     display: flex;
     flex-direction: column;
+    border-right: 1px solid #e7e7e7;
+    padding:5px;
 }
 
 .drop-data h3 {
-    font-size: 1vw;
+    font-size: 0.8vw;
     color: #000;
     border-bottom: 0.125rem solid #eee;
     padding-bottom: 0.625rem;
@@ -86,7 +97,7 @@ a {
     padding: 5px;
     color: #666;
     font-weight: normal;
-    font-size: 0.9vw;
+    font-size: 0.7vw;
     transition: 0.5s;
 }
 

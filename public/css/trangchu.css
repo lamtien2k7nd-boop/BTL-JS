@@ -1,0 +1,468 @@
+/* ========== SEARCH ========== */
+.search {
+    background-color: #E9E9E9;
+    padding-bottom: 6.25rem;
+}
+
+.s-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3.125rem;
+    padding-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5vh;
+    color:#474747;
+}
+
+.s-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    max-width: 80vw;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:#474747;
+}
+
+.searchbox {
+    display: flex;
+    justify-content: center;
+}
+
+.search-input {
+    padding-left: 0.625rem;
+    width: 51.5625rem;
+    height: 2.5rem;
+}
+
+.search-input:focus::placeholder {
+    color: transparent;
+    transition: 0.3s;
+}
+
+.search-input-button {
+    padding-left: 5px;
+    width: 3vw;
+}
+
+/* ========== CATEGORY ========== */
+.category {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.cate-h {
+    margin: 40px auto;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    text-align: center;
+    color:#6d6d6d;
+}
+
+.cate-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    gap: 20px;
+    color:#6d6d6d;
+}
+
+.cate-data a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    transition: ease 0.4s;
+    color:#5a6470;
+}
+
+.cate-data-img {
+    width: clamp(2rem, 8vw, 3.75rem);
+    height: clamp(2rem, 8vw, 3.75rem);
+    margin: 0 0 20px 0;
+}
+
+.cate-data-h {
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    font-size: clamp(0.875rem, 2.5vw, 1.25rem);
+}
+
+.cate-data-p {
+    height: auto;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    margin-top: 20px;
+    transition: 0.75s;
+    font-size: clamp(0.75rem, 2vw, 1rem);
+}
+
+.cate-data a:hover {
+    color:#000;
+    transform: translateY(-10px);
+}
+
+/* ========== SECTIONS ========== */
+.hsa-section,
+.thpt-section,
+.g12-section,
+.g10-section  {
+    background-color: #fafafa;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.tsa-section,
+.g11-section{
+    background-color: #ffffff;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title {
+    text-align: center;
+    margin: 20px;
+    color:#6d6d6d;
+}
+#hsa-tab-math:checked ~ .tab-content .hsa-math {
+    display: block !important;
+}
+/* ========== TABS (GENERAL) ========== */
+.tabs input[type="radio"] {
+    display: none;
+}
+
+.hsa-tab-labels,
+.tsa-tab-labels,
+.VACT-tab-labels,
+.g12-tab-labels,
+.g11-tab-labels,
+.g10-tab-labels {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    z-index: 5;
+}
+
+.hsa-tab-labels label,
+.tsa-tab-labels label,
+.VACT-tab-labels label, 
+.g12-tab-labels label,
+.g11-tab-labels label,
+.g10-tab-labels label {
+    cursor: pointer;
+    transition: 0.3s;
+    color: #777;
+    padding: 10px;
+    border: 3px;
+    border-radius: 30px;
+}
+
+.hsa-tab-labels label:hover,
+.tsa-tab-labels label:hover,
+.VACT-tab-labels label:hover,
+.g12-tab-labels label:hover,
+.g11-tab-labels label:hover,
+.g10-tab-labels label:hover {
+    color: #000;
+}
+
+/* ========== ACTIVE TAB STATES ========== */
+#hsa-tab-math:checked ~ .hsa-tab-labels [for="hsa-tab-math"],
+#hsa-tab-language:checked ~ .hsa-tab-labels [for="hsa-tab-language"],
+#hsa-tab-science:checked ~ .hsa-tab-labels [for="hsa-tab-science"],
+#hsa-tab-english:checked ~ .hsa-tab-labels [for="hsa-tab-english"],
+#hsa-tab-sample:checked ~ .hsa-tab-labels [for="hsa-tab-sample"],
+#tsa-tab-math:checked ~ .tsa-tab-labels [for="tsa-tab-math"],
+#tsa-tab-language:checked ~ .tsa-tab-labels [for="tsa-tab-language"],
+#tsa-tab-science:checked ~ .tsa-tab-labels [for="tsa-tab-science"],
+#tsa-tab-sample:checked ~ .tsa-tab-labels [for="tsa-tab-sample"],
+#math-VACT:checked ~ .VACT-tab-labels [for="math-VACT"],
+#vietnam-VACT:checked ~ .VACT-tab-labels [for="vietnam-VACT"],
+#TA-VACT:checked ~ .VACT-tab-labels [for="TA-VACT"],
+#science-VACT:checked ~ .VACT-tab-labels [for="science-VACT"],
+#sample-VACT:checked ~ .VACT-tab-labels [for="sample-VACT"],
+#g12-tab-math:checked ~ .g12-tab-labels [for="g12-tab-math"],
+#g12-tab-language:checked ~ .g12-tab-labels [for="g12-tab-language"],
+#g12-tab-english:checked ~ .g12-tab-labels [for="g12-tab-english"],
+#g12-tab-physics:checked ~ .g12-tab-labels [for="g12-tab-physics"],
+#g12-tab-chemical:checked ~ .g12-tab-labels [for="g12-tab-chemical"],
+#g12-tab-biological:checked ~ .g12-tab-labels [for="g12-tab-biological"],
+#g12-tab-history:checked ~ .g12-tab-labels [for="g12-tab-history"],
+#g12-tab-geography:checked ~ .g12-tab-labels [for="g12-tab-geography"],
+#g12-tab-law:checked ~ .g12-tab-labels [for="g12-tab-law"],
+#g12-tab-IT:checked ~ .g12-tab-labels [for="g12-tab-IT"],
+#g11-tab-math:checked ~ .g11-tab-labels [for="g11-tab-math"],
+#g11-tab-language:checked ~ .g11-tab-labels [for="g11-tab-language"],
+#g11-tab-english:checked ~ .g11-tab-labels [for="g11-tab-english"],
+#g11-tab-physics:checked ~ .g11-tab-labels [for="g11-tab-physics"],
+#g11-tab-chemical:checked ~ .g11-tab-labels [for="g11-tab-chemical"],
+#g11-tab-biological:checked ~ .g11-tab-labels [for="g11-tab-biological"],
+#g11-tab-history:checked ~ .g11-tab-labels [for="g11-tab-history"],
+#g11-tab-geography:checked ~ .g11-tab-labels [for="g11-tab-geography"],
+#g11-tab-law:checked ~ .g11-tab-labels [for="g11-tab-law"],
+#g11-tab-IT:checked ~ .g11-tab-labels [for="g11-tab-IT"],
+#g10-tab-math:checked ~ .g10-tab-labels [for="g10-tab-math"],
+#g10-tab-language:checked ~ .g10-tab-labels [for="g10-tab-language"],
+#g10-tab-english:checked ~ .g10-tab-labels [for="g10-tab-english"],
+#g10-tab-physics:checked ~ .g10-tab-labels [for="g10-tab-physics"],
+#g10-tab-chemical:checked ~ .g10-tab-labels [for="g10-tab-chemical"],
+#g10-tab-biological:checked ~ .g10-tab-labels [for="g10-tab-biological"],
+#g10-tab-history:checked ~ .g10-tab-labels [for="g10-tab-history"],
+#g10-tab-geography:checked ~ .g10-tab-labels [for="g10-tab-geography"],
+#g10-tab-law:checked ~ .g10-tab-labels [for="g10-tab-law"],
+#g10-tab-IT:checked ~ .g10-tab-labels [for="g10-tab-IT"] {
+    color: #fd883a;
+    font-weight: 600;
+    border: 3px solid #fd883a;
+    border-radius: 30px;
+    background-color: white;
+}
+
+/* ========== TAB CONTENT ========== */
+.tab-content {
+    width: 70%;
+    margin: 20px auto;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.tab-slider {
+    display: flex;
+    width: 500%;
+    transition: transform 0.5s ease;
+}
+
+.hsa-section .tab-slider { width: 500%; } /* 5 tabs */
+.tsa-section .tab-slider { width: 400%; } /* 4 tabs */
+.g12-section .tab-slider { width: 1000%; } /* 10 tabs */
+.g11-section .tab-slider { width: 1000%; } /* 10 tabs */
+.g10-section .tab-slider { width: 1000%; } /* 10 tabs */
+
+.tab-panel {
+    width: 20%;
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    gap:10px;
+    margin: 0 auto;
+}
+
+.hsa-section .tab-panel { width: 20%; }
+.tsa-section .tab-panel { width: 25%; }
+.g12-section .tab-panel,
+.g11-section .tab-panel,
+.g10-section .tab-panel { width: 10%; }
+
+/* HSA Tab Content */
+#hsa-tab-math:checked ~ .tab-content .tab-slider { transform: translateX(0); }
+#hsa-tab-language:checked ~ .tab-content .tab-slider { transform: translateX(-20%); }
+#hsa-tab-english:checked ~ .tab-content .tab-slider { transform: translateX(-40%); }
+#hsa-tab-science:checked ~ .tab-content .tab-slider { transform: translateX(-60%); }
+#hsa-tab-sample:checked ~ .tab-content .tab-slider { transform: translateX(-80%); }
+/* TSA Tab Content */
+#tsa-tab-math:checked ~ .tab-content .tab-slider { transform: translateX(0); }
+#tsa-tab-language:checked ~ .tab-content .tab-slider { transform: translateX(-25%); }
+#tsa-tab-science:checked ~ .tab-content .tab-slider { transform: translateX(-50%); }
+#tsa-tab-sample:checked ~ .tab-content .tab-slider { transform: translateX(-75%); }
+/* G12 Tab Content */
+#g12-tab-math:checked ~ .tab-content .tab-slider { transform: translateX(0); }
+#g12-tab-language:checked ~ .tab-content .tab-slider { transform: translateX(-10%); }
+#g12-tab-english:checked ~ .tab-content .tab-slider { transform: translateX(-20%); }
+#g12-tab-physics:checked ~ .tab-content .tab-slider { transform: translateX(-30%); }
+#g12-tab-chemical:checked ~ .tab-content .tab-slider { transform: translateX(-40%); }
+#g12-tab-biological:checked ~ .tab-content .tab-slider { transform: translateX(-50%); }
+#g12-tab-history:checked ~ .tab-content .tab-slider { transform: translateX(-60%); }
+#g12-tab-geography:checked ~ .tab-content .tab-slider { transform: translateX(-70%); }
+#g12-tab-law:checked ~ .tab-content .tab-slider { transform: translateX(-80%); }
+#g12-tab-IT:checked ~ .tab-content .tab-slider { transform: translateX(-90%); }
+/* G11 Tab Content */
+#g11-tab-math:checked ~ .tab-content .tab-slider { transform: translateX(0); }
+#g11-tab-language:checked ~ .tab-content .tab-slider { transform: translateX(-10%); }
+#g11-tab-english:checked ~ .tab-content .tab-slider { transform: translateX(-20%); }
+#g11-tab-physics:checked ~ .tab-content .tab-slider { transform: translateX(-30%); }
+#g11-tab-chemical:checked ~ .tab-content .tab-slider { transform: translateX(-40%); }
+#g11-tab-biological:checked ~ .tab-content .tab-slider { transform: translateX(-50%); }
+#g11-tab-history:checked ~ .tab-content .tab-slider { transform: translateX(-60%); }
+#g11-tab-geography:checked ~ .tab-content .tab-slider { transform: translateX(-70%); }
+#g11-tab-law:checked ~ .tab-content .tab-slider { transform: translateX(-80%); }
+#g11-tab-IT:checked ~ .tab-content .tab-slider { transform: translateX(-90%); }
+/* G10 Tab Content */
+#g10-tab-math:checked ~ .tab-content .tab-slider { transform: translateX(0); }
+#g10-tab-language:checked ~ .tab-content .tab-slider { transform: translateX(-10%); }
+#g10-tab-english:checked ~ .tab-content .tab-slider { transform: translateX(-20%); }
+#g10-tab-physics:checked ~ .tab-content .tab-slider { transform: translateX(-30%); }
+#g10-tab-chemical:checked ~ .tab-content .tab-slider { transform: translateX(-40%); }
+#g10-tab-biological:checked ~ .tab-content .tab-slider { transform: translateX(-50%); }
+#g10-tab-history:checked ~ .tab-content .tab-slider { transform: translateX(-60%); }
+#g10-tab-geography:checked ~ .tab-content .tab-slider { transform: translateX(-70%); }
+#g10-tab-law:checked ~ .tab-content .tab-slider { transform: translateX(-80%); }
+#g10-tab-IT:checked ~ .tab-content .tab-slider { transform: translateX(-90%); }
+
+.viewport{
+    width: 100%;
+    overflow: hidden;
+}
+.track{
+    display:flex;
+    transition: ease 0.5s;
+}
+
+/* ========== CARDS ========== */
+.card {
+    /* width: 250px; */
+    min-width: 25%;
+    margin: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    transition: 0.4s ease;
+}
+
+.card p {
+    margin: 15px 0;
+    transition: 0.4s ease;
+}
+
+.card:hover img{
+    transform: translateY(-10px);
+}
+.card:hover p {
+    transform: translateY(-30px);
+    background-color: #ffffff;
+    /* padding: 5px; */
+}
+
+/* ==========CHANGING CAROUSEL TO CARDS========== */
+.tabs button{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:white;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+    transition: 0.3s ease;
+    visibility: hidden;
+    opacity: 0;
+    height: 100%;
+    
+}
+.tabs:hover button{
+    visibility: visible;
+    opacity: 1;
+}
+.SPT-container button{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:white;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+    transition: 0.3s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+.SPT-container:hover button{
+    visibility: visible;
+    opacity: 1;
+}
+/* ==========SPT CARDS=========== */
+.SPT-section {
+    display:flex;
+    flex-direction: column;
+}
+/* THPT Cards */
+.thpt-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    justify-content: center;
+}
+
+.SPT-container {
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.SPT-section .viewport {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 90%
+}
+
+.SPT-section .track {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    gap: 20px;
+}
+
+.thpt-card {
+    width: calc(20% - 20px);
+    transition: ease 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.thpt-card img {
+    width: 100%;
+    transition: ease 0.4s;
+}
+
+.thpt-card p {
+    font-size: 13px;
+    text-align: center;
+    transition: ease 0.5s;
+    padding: 5px;
+    max-width: 80%;
+}
+
+.thpt-card h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.thpt-card:hover {
+    transform: translateY(-10px);
+}
+
+.thpt-card:hover p {
+    background-color: #fd883a;
+    color: #ffffff;
+}
+
+.thpt-card:hover h2 {
+    color: #000;
+}
