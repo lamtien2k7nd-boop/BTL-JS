@@ -214,11 +214,11 @@
 #tsa-tab-language:checked ~ .tsa-tab-labels [for="tsa-tab-language"],
 #tsa-tab-science:checked ~ .tsa-tab-labels [for="tsa-tab-science"],
 #tsa-tab-sample:checked ~ .tsa-tab-labels [for="tsa-tab-sample"],
-#math-VACT:checked ~ .VACT-tab-labels [for="math-VACT"],
-#vietnam-VACT:checked ~ .VACT-tab-labels [for="vietnam-VACT"],
-#TA-VACT:checked ~ .VACT-tab-labels [for="TA-VACT"],
-#science-VACT:checked ~ .VACT-tab-labels [for="science-VACT"],
-#sample-VACT:checked ~ .VACT-tab-labels [for="sample-VACT"],
+#vact-tab-math:checked ~ .VACT-tab-labels [for="vact-tab-math"],
+#vact-tab-language:checked ~ .VACT-tab-labels [for="vact-tab-language"],
+#vact-tab-english:checked ~ .VACT-tab-labels [for="vact-tab-english"],
+#vact-tab-science:checked ~ .VACT-tab-labels [for="vact-tab-science"],
+#vact-tab-sample:checked ~ .VACT-tab-labels [for="vact-tab-sample"],
 #g12-tab-math:checked ~ .g12-tab-labels [for="g12-tab-math"],
 #g12-tab-language:checked ~ .g12-tab-labels [for="g12-tab-language"],
 #g12-tab-english:checked ~ .g12-tab-labels [for="g12-tab-english"],
@@ -272,6 +272,7 @@
 }
 
 .hsa-section .tab-slider { width: 500%; } /* 5 tabs */
+.VACT-section .tab-slider { width: 500%; } /* 5 tabs */
 .tsa-section .tab-slider { width: 400%; } /* 4 tabs */
 .g12-section .tab-slider { width: 1000%; } /* 10 tabs */
 .g11-section .tab-slider { width: 1000%; } /* 10 tabs */
@@ -287,6 +288,7 @@
 }
 
 .hsa-section .tab-panel { width: 20%; }
+.VACT-section .tab-panel { width: 20%; }
 .tsa-section .tab-panel { width: 25%; }
 .g12-section .tab-panel,
 .g11-section .tab-panel,
@@ -298,6 +300,12 @@
 #hsa-tab-english:checked ~ .tab-content .tab-slider { transform: translateX(-40%); }
 #hsa-tab-science:checked ~ .tab-content .tab-slider { transform: translateX(-60%); }
 #hsa-tab-sample:checked ~ .tab-content .tab-slider { transform: translateX(-80%); }
+/* VACT Tab Content */
+#vact-tab-math:checked ~ .tab-content .tab-slider { transform: translateX(0); }
+#vact-tab-language:checked ~ .tab-content .tab-slider { transform: translateX(-20%); }
+#vact-tab-english:checked ~ .tab-content .tab-slider { transform: translateX(-40%); }
+#vact-tab-science:checked ~ .tab-content .tab-slider { transform: translateX(-60%); }
+#vact-tab-sample:checked ~ .tab-content .tab-slider { transform: translateX(-80%); }
 /* TSA Tab Content */
 #tsa-tab-math:checked ~ .tab-content .tab-slider { transform: translateX(0); }
 #tsa-tab-language:checked ~ .tab-content .tab-slider { transform: translateX(-25%); }

@@ -1400,20 +1400,141 @@
         <div class="VACT-section">
             <h1 class="section-title"> TÀI LIỆU ĐGNL TPHCM (VACT)</h1>
             <div class="tabs">
-                <input type="radio" name="VACT" id="math-VACT" checked>
-                <input type="radio" name="VACT" id="vietnam-VACT">
-                <input type="radio" name="VACT" id="TA-VACT">
-                <input type="radio" name="VACT" id="science-VACT">
-                <input type="radio" name="VACT" id="sample-VACT">
-                <div class="VACT-tab-label">
-                    <label for="math-VACT">Toán-logic-PTSL</label>
-                    <label for="vietnam-VACT">Tiếng Việt</label>
-                    <label for="TA-VACT">Tiếng Anh</label>
-                    <label for="science-VACT">Khoa học</label>
-                    <label for="sample-VACT">Đề minh họa</label>
+                <input type="radio" name="VACT" id="vact-tab-math" checked>
+                <input type="radio" name="VACT" id="vact-tab-language">
+                <input type="radio" name="VACT" id="vact-tab-english">
+                <input type="radio" name="VACT" id="vact-tab-science">
+                <input type="radio" name="VACT" id="vact-tab-sample">
+                <div class="VACT-tab-labels">
+                    <label for="vact-tab-math">Toán-logic-PTSL</label>
+                    <label for="vact-tab-language">Tiếng Việt</label>
+                    <label for="vact-tab-english">Tiếng Anh</label>
+                    <label for="vact-tab-science">Khoa học</label>
+                    <label for="vact-tab-sample">Đề minh họa</label>
                 </div>
-                <div>
-
+                <div class="tab-content">
+                    <div class="tab-slider">
+                        <div class="tab-panel VACT-math">   
+                            <button class="prev"><</button>    
+                            <div class="viewport">
+                                <div class="track" id="track">
+                                    <div class="card">
+                                        <img src="https://tailieuonthi.org/wp-content/uploads/2025/01/image-12-600x390.png" alt="">
+                                        <p>Đề minh họa đánh giá năng lực TP HCM 2025 (đề full) số 1</p>
+                                    </div>
+                                    <div class="card">
+                                        <img style="height: 140px;width: 250px;" src="https://tailieuonthi.org/wp-content/uploads/2025/01/de-thi-thu-danh-gia-nang-luc-tphcm-so-2-400x400.webp" alt="">
+                                        <p>Đề minh họa đánh giá năng lực TP HCM 2025 (đề full) số 2</p>
+                                    </div>
+                                    <div class="card">
+                                        <img src="https://tailieuonthi.org/wp-content/uploads/2024/10/tai-lieu-on-thi-danh-gia-nang-luc-phan-so-hoc-2025-671223dd8c6dd-600x338.webp" alt="">
+                                        <p>Tài liệu ôn thi đánh giá năng lực phần số học 2025</p>
+                                    </div>
+                                    <div class="card">
+                                        <img src="https://tailieuonthi.org/wp-content/uploads/2024/09/he-thong-ly-thuyet-logic-danh-gia-nang-luc-hcm-66dec4eb7dd6a-600x338.webp" alt="">
+                                        <p>Hệ thống lý thuyết Logic - đánh giá năng lực HCM</p>
+                                    </div>
+                                </div>
+                            </div>   
+                            <button class="next">></button>        
+                        </div>
+                        <div class="tab-panel VACT-VN">
+                            <button class="prev"><</button>
+                            <div class="viewport">
+                                <div class="track" id="track">
+                                    <div class="card">
+                                        <img src="https://tailieuonthi.org/wp-content/uploads/2025/01/image-12-600x390.png" alt="">
+                                        <p>Đề minh họa đánh giá năng lực TP HCM 2025 (đề full) số 1</p>
+                                    </div>
+                                    <div class="card">
+                                        <img style="height: 140px;width: 250px;" src="https://tailieuonthi.org/wp-content/uploads/2025/01/de-thi-thu-danh-gia-nang-luc-tphcm-so-2-400x400.webp" alt="">
+                                        <p>Đề minh họa đánh giá năng lực TP HCM 2025 (đề full) số 2</p>
+                                    </div>
+                                    <div class="card">
+                                        <img src="https://tailieuonthi.org/wp-content/uploads/2024/10/tai-lieu-on-thi-danh-gia-nang-luc-phan-so-hoc-2025-671223dd8c6dd-600x338.webp" alt="">
+                                        <p>Tài liệu ôn thi đánh giá năng lực phần số học 2025</p>
+                                    </div>
+                                    <div class="card">
+                                        <img src="https://tailieuonthi.org/wp-content/uploads/2024/09/he-thong-ly-thuyet-logic-danh-gia-nang-luc-hcm-66dec4eb7dd6a-600x338.webp" alt="">
+                                        <p>Hệ thống lý thuyết Logic - đánh giá năng lực HCM</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="next">></button>
+                        </div>
+                        <div class="tab-panel VACT-TA">
+                            <button class="prev"><</button>
+                            <div class="viewport">
+                                <div class="track" id="track">
+                                    <div class="card">
+                                        <img src="https://tailieuonthi.org/wp-content/uploads/2025/01/image-12-600x390.png" alt="">
+                                        <p>Đề minh họa đánh giá năng lực TP HCM 2025 (đề full) số 1</p>
+                                    </div>
+                                    <div class="card">
+                                        <img style="height: 140px;width: 250px;" src="https://tailieuonthi.org/wp-content/uploads/2025/01/de-thi-thu-danh-gia-nang-luc-tphcm-so-2-400x400.webp" alt="">
+                                        <p>Đề minh họa đánh giá năng lực TP HCM 2025 (đề full) số 2</p>
+                                    </div>
+                                    <div class="card">
+                                        <img src="https://tailieuonthi.org/wp-content/uploads/2024/10/tai-lieu-on-thi-danh-gia-nang-luc-phan-so-hoc-2025-671223dd8c6dd-600x338.webp" alt="">
+                                        <p>Tài liệu ôn thi đánh giá năng lực phần số học 2025</p>
+                                    </div>
+                                    <div class="card">
+                                        <img src="https://tailieuonthi.org/wp-content/uploads/2024/09/he-thong-ly-thuyet-logic-danh-gia-nang-luc-hcm-66dec4eb7dd6a-600x338.webp" alt="">
+                                        <p>Hệ thống lý thuyết Logic - đánh giá năng lực HCM</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="next">></button>
+                        </div>
+                        <div class="tab-panel VACT-science">
+                            <button class="prev"><</button>
+                            <div class="viewport">
+                                <div class="track" id="track">
+                                    <div class="card">
+                                        <img src="https://tailieuonthi.org/wp-content/uploads/2025/01/image-12-600x390.png" alt="">
+                                        <p>Đề minh họa đánh giá năng lực TP HCM 2025 (đề full) số 1</p>
+                                    </div>
+                                    <div class="card">
+                                        <img style="height: 140px;width: 250px;" src="https://tailieuonthi.org/wp-content/uploads/2025/01/de-thi-thu-danh-gia-nang-luc-tphcm-so-2-400x400.webp" alt="">
+                                        <p>Đề minh họa đánh giá năng lực TP HCM 2025 (đề full) số 2</p>
+                                    </div>
+                                    <div class="card">
+                                        <img src="https://tailieuonthi.org/wp-content/uploads/2024/10/tai-lieu-on-thi-danh-gia-nang-luc-phan-so-hoc-2025-671223dd8c6dd-600x338.webp" alt="">
+                                        <p>Tài liệu ôn thi đánh giá năng lực phần số học 2025</p>
+                                    </div>
+                                    <div class="card">
+                                        <img src="https://tailieuonthi.org/wp-content/uploads/2024/09/he-thong-ly-thuyet-logic-danh-gia-nang-luc-hcm-66dec4eb7dd6a-600x338.webp" alt="">
+                                        <p>Hệ thống lý thuyết Logic - đánh giá năng lực HCM</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="next">></button>
+                        </div>
+                        <div class="tab-panel VACT-sample">
+                            <button class="prev"><</button>
+                            <div class="viewport">
+                                <div class="track" id="track">
+                                    <div class="card">
+                                        <img src="https://tailieuonthi.org/wp-content/uploads/2025/01/image-12-600x390.png" alt="">
+                                        <p>Đề minh họa đánh giá năng lực TP HCM 2025 (đề full) số 1</p>
+                                    </div>
+                                    <div class="card">
+                                        <img style="height: 140px;width: 250px;" src="https://tailieuonthi.org/wp-content/uploads/2025/01/de-thi-thu-danh-gia-nang-luc-tphcm-so-2-400x400.webp" alt="">
+                                        <p>Đề minh họa đánh giá năng lực TP HCM 2025 (đề full) số 2</p>
+                                    </div>
+                                    <div class="card">
+                                        <img src="https://tailieuonthi.org/wp-content/uploads/2024/10/tai-lieu-on-thi-danh-gia-nang-luc-phan-so-hoc-2025-671223dd8c6dd-600x338.webp" alt="">
+                                        <p>Tài liệu ôn thi đánh giá năng lực phần số học 2025</p>
+                                    </div>
+                                    <div class="card">
+                                        <img src="https://tailieuonthi.org/wp-content/uploads/2024/09/he-thong-ly-thuyet-logic-danh-gia-nang-luc-hcm-66dec4eb7dd6a-600x338.webp" alt="">
+                                        <p>Hệ thống lý thuyết Logic - đánh giá năng lực HCM</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="next">></button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
