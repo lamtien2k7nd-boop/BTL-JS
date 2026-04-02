@@ -73,8 +73,22 @@ function carousel(){
         }
     });
 }
+function welcome(){
+    window.addEventListener("load", () => {
+    setTimeout(() => {
+        const popup = document.getElementById("welcome-popup");
+        popup.style.opacity = "0";
+        popup.style.transition = "opacity 0.5s ease";
+
+        setTimeout(() => {
+            popup.style.display = "none";
+        }, 500);
+    }, 2500); // khớp với animation (1s delay + 2s fade)
+    });
+}
 function run(){
     dropdown();
     carousel();
+    // welcome();
 }
 run();

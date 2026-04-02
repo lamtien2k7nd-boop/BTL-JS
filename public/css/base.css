@@ -17,7 +17,10 @@ a {
     padding: 0;
     margin: 0;
 }
-
+.logo{
+    margin: 0 auto;
+    width: 15vw;
+}
 .logo img {
     display: block;
     margin: 0 auto 0.625rem;
