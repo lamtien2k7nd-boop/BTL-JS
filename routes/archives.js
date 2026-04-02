@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/archives', (req, res) => {
-    res.render('archives', {
+    res.render('category_archives', {
         title: 'Kho tài liệu',
         documents: [] // tạm để rỗng, sau này fetch data vào
     });
