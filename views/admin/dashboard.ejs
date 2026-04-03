@@ -1,0 +1,50 @@
+<h1>Dashboard</h1>
+<div class="stats-grid">
+    <div class="stat-card">
+        <h3>Tổng lượt truy cập web</h3>
+        <p class="stat-number"><%= stats.pageViews %></p>
+    </div>
+    <div class="stat-card">
+        <h3>Tổng số tài liệu</h3>
+        <p class="stat-number"><%= stats.totalDocs %></p>
+    </div>
+</div>
+
+<div class="category-stats">
+    <h2>Số lượng tài liệu theo category</h2>
+    <table>
+        <thead>
+            <tr><th>ID</th><th>Tên category</th><th>Số tài liệu</th></tr>
+        </thead>
+        <tbody>
+            <% stats.categoryCounts.forEach(cat => { %>
+            <tr>
+                <td><%= cat.id %></td>
+                <td><%= cat.name %></td>
+                <td><%= cat.count %></td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
+
+<div class="top-docs">
+    <h2>Tài liệu được truy cập nhiều nhất</h2>
+    <canvas id="topDocsChart" width="400" height="200"></canvas>
+</div>
+
+<script>
+    const ctx = document.getElementById('topDocsChart').getContext('2d');
+    const topDocs = <%- JSON.stringify(stats.topDocs) %>;
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: topDocs.map(d => d.testName),
+            datasets: [{
+                label: 'Số lượt truy cập',
+                data: topDocs.map(d => d.count),
+                backgroundColor: '#4a90e2'
+            }]
+        }
+    });
+</script>

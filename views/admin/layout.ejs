@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="light-mode">
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="logo">Admin Panel</div>
+            <nav>
+                <a href="/admin/dashboard">Dashboard</a>
+                <a href="/admin/documents">Quản lý tài liệu</a>
+                <a href="/admin/logs">Quản lý truy cập</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <div class="top-bar">
+                <button id="theme-toggle" class="theme-btn">🌓 Dark/Light</button>
+                <a href="/admin/logout" class="logout-btn">Đăng xuất</a>
+            </div>
+            <div class="content">
+                <%- bodyContent %>   <!-- Nội dung riêng của từng trang -->
+            </div>
+        </main>
+    </div>
+    <script src="/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      transition: 0.3s;
+    }
+
+    .dark {
+      background: #0f172a;
+      color: white;
+    }
+
+    .light {
+      background: #f3f4f6;
+      color: black;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 20px;
+      border-bottom: 1px solid #444;
+    }
+
+    .btn {
+      padding: 8px 12px;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      margin-left: 8px;
+    }
+
+    .btn-dark {
+      background: #1f2937;
+      color: white;
+    }
+
+    .btn-light {
+      background: white;
+      border: 1px solid #ccc;
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+      padding: 20px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .card {
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .light .card {
+      background: white;
+    }
+
+    .chart {
+      height: 300px;
+      display: flex;
+      align-items: flex-end;
+      gap: 20px;
+    }
+
+    .bar {
+      width: 40px;
+      background: gray;
+      text-align: center;
+      color: white;
+      border-radius: 6px 6px 0 0;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body class="dark" id="app">
+
+  <div class="topbar">
+    <h2>Admin Dashboard</h2>
+    <div>
+      <button class="btn btn-dark" onclick="toggleTheme()">🌙</button>
+      <button class="btn btn-dark">Logout</button>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="grid grid-3">
+    <div class="card">
+      <p>Total Visits</p>
+      <h2 id="visits">12450</h2>
+    </div>
+
+    <div class="card">
+      <p>Total Documents</p>
+      <h2 id="docs">45</h2>
+    </div>
+
+    <div class="card">
+      <p>Categories</p>
+      <h2 id="cats">3</h2>
+    </div>
+  </div>
+
+  <!-- Chart -->
+  <div class="grid">
+    <div class="card">
+      <h3>Top Documents</h3>
+      <div class="chart" id="chart"></div>
+    </div>
+  </div>
+
+  <!-- Categories -->
+  <div class="grid grid-3" id="categories"></div>
+
+  <!-- Manage -->
+  <div class="grid">
+    <div class="card">
+      <h3>Manage Documents</h3>
+      <button class="btn btn-dark">Add</button>
+      <button class="btn btn-light">Edit</button>
+    </div>
+
+    <div class="card">
+      <h3>Manage Visits</h3>
+      <button class="btn btn-light">View Logs</button>
+    </div>
+  </div>
+
+  <script>
+    const data = {
+      topDocs: [
+        { name: "Toán", views: 1200 },
+        { name: "Lý", views: 900 },
+        { name: "Hóa", views: 700 }
+      ],
+      categories: [
+        { name: "Toán", count: 20 },
+        { name: "Lý", count: 15 },
+        { name: "Hóa", count: 10 }
+      ]
+    };
+
+    function renderChart() {
+      const chart = document.getElementById("chart");
+      chart.innerHTML = "";
+
+      data.topDocs.forEach(doc => {
+        const bar = document.createElement("div");
+        bar.className = "bar";
+        bar.style.height = doc.views / 5 + "px";
+        bar.innerText = doc.views;
+        chart.appendChild(bar);
+      });
+    }
+
+    function renderCategories() {
+      const container = document.getElementById("categories");
+      container.innerHTML = "";
+
+      data.categories.forEach(cat => {
+        const div = document.createElement("div");
+        div.className = "card row";
+        div.innerHTML = `<span>${cat.name}</span><span>${cat.count}</span>`;
+        container.appendChild(div);
+      });
+    }
+
+    function toggleTheme() {
+      const app = document.getElementById("app");
+      app.classList.toggle("dark");
+      app.classList.toggle("light");
+    }
+
+    renderChart();
+    renderCategories();
+  </script>
+
+</body>
+</html>

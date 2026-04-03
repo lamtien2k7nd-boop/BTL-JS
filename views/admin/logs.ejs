@@ -1,0 +1,16 @@
+<h1>Nhật ký truy cập</h1>
+<table class="logs-table">
+    <thead>
+        <tr><th>Thời gian</th><th>Loại</th><th>Đường dẫn / Tài liệu</th><th>IP</th></tr>
+    </thead>
+    <tbody>
+        <% logs.forEach(log => { %>
+        <tr>
+            <td><%= new Date(log.timestamp).toLocaleString() %></td>
+            <td><%= log.type === 'page_view' ? 'Trang' : 'Tài liệu' %></td>
+            <td><%= log.path || (log.categoryId + ' - ' + log.testName) %></td>
+            <td><%= log.ip %></td>
+        </tr>
+        <% }) %>
+    </tbody>
+</table>

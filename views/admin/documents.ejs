@@ -1,0 +1,52 @@
+<h1>Quản lý tài liệu</h1>
+<% categories.forEach(category => { %>
+    <div class="category-section" data-category-id="<%= category.id %>">
+        <h2><%= category.title %> (<%= category.id %>)</h2>
+        <button class="add-test-btn" data-cat-id="<%= category.id %>">+ Thêm tài liệu</button>
+        <div class="tests-list">
+            <% category.tests.forEach((test, idx) => { %>
+                <div class="test-item">
+                    <form method="POST" action="/admin/documents/update/<%= category.id %>/<%= idx %>">
+                        <input name="name" value="<%= test.name %>" placeholder="Tên đề">
+                        <input name="dateDay" value="<%= test.dateDay %>" placeholder="Ngày">
+                        <input name="dateMonth" value="<%= test.dateMonth %>" placeholder="Tháng">
+                        <textarea name="excerpt" placeholder="Mô tả"><%= test.excerpt %></textarea>
+                        <input name="image" value="<%= test.image %>" placeholder="URL ảnh">
+                        <button type="submit">Cập nhật</button>
+                    </form>
+                    <form method="POST" action="/admin/documents/delete/<%= category.id %>/<%= idx %>" onsubmit="return confirm('Xóa tài liệu này?')">
+                        <button type="submit" class="delete-btn">Xóa</button>
+                    </form>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+<% }) %>
+
+<!-- Modal thêm tài liệu (đơn giản, có thể dùng prompt hoặc form inline) -->
+<script>
+    document.querySelectorAll('.add-test-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const catId = btn.dataset.catId;
+            const name = prompt('Tên đề:');
+            if (!name) return;
+            const dateDay = prompt('Ngày (số):') || '01';
+            const dateMonth = prompt('Tháng (chữ, ví dụ Jan):') || 'Jan';
+            const excerpt = prompt('Mô tả ngắn:') || '';
+            const image = prompt('URL ảnh:') || 'https://tailieuonthi.org/wp-content/uploads/2026/01/15-696213d9e9756-768x384.webp';
+            // Tạo form submit POST
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = `/admin/documents/add/${catId}`;
+            const fields = { name, dateDay, dateMonth, excerpt, image };
+            for (let [k, v] of Object.entries(fields)) {
+                const input = document.createElement('input');
+                input.name = k;
+                input.value = v;
+                form.appendChild(input);
+            }
+            document.body.appendChild(form);
+            form.submit();
+        });
+    });
+</script>
