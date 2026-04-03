@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title || 'Tài liệu ôn thi - Đề thi thử' %></title>
-    <link rel="stylesheet" href="/public/css/category_archives.css">
-    <link rel="stylesheet" href="/public/css/base.css">
+    <link rel="stylesheet" href="/css/category_archives.css">
+    <link rel="stylesheet" href="/css/base.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -13,43 +13,54 @@
 </head>
 <body>
     <%-include('partials/header')%>
+    <!-- <div class="fly-out">
+        <img src="/public/img/Screenshot 2026-03-12 080933.png" alt="">
+        <div class="fly-out-content">
+            <div class="fly-out-header">
+                <h3><%= category %></h3>
+                <button class="fly-out-close">&times;</button>
+            </div>
+            <div class="fly-out-body">
+                <p><%= description %></p>
+            </div>
+        </div>
+    </div> -->
+    <div class="title">
+        <h3><%= category %></h3>
+        <p><%= description %></p>
+    </div>
     <div class="container">
-        <div class="title">
-            <h3>category archives:<%= category %></h3>
-            <p>Tổng hợp tài liệu toán học (định lượng) trong bài thi đánh giá năng lực – Đại học quốc gia HN (HSA) như đề minh họa, chuyên đề ôn tập</p>
-        </div>
-        <div class="container">
-            <div class="side-l">
-                <div class="searchbox">
-                        <input type="text" placeholder="Tìm kiếm ở đây" class="search-input">
-                        <button class="search-input-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
+        <div class="side-l">
+            <div class="searchbox">
+                    <input type="text" placeholder="Tìm kiếm ở đây" class="search-input">
+                    <button class="search-input-button"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-            <div class="tests">
-                <% testsdata.forEach(test => { %>
-                    <div class="card">
-                        <img src="<%= test.image %>" alt="">
-                        <div class="date">
-                            <h4><%= test.date.getDate() %></h4>
-                            <p><%= test.date.toLocaleString('default', { month: 'short' }) %></p>
-                        </div>
-                        <h3><%= test.title %></h3>
-                        <p><%= test.description %></p>
+        </div>
+        <div class="tests">
+            <% testsdata.forEach(test => { %>
+                <div class="card">
+                    <img src="<%= test.image %>" alt="">
+                    <div class="date">
+                        <h4><%= test.dateDay %></h4>
+                        <p><%= test.dateMonth %></p>
                     </div>
-                <% }) %>
-            </div>
-        </div>
-        <div class="pages">
-            <button class="page-btn" id="prev">&lt;</button>
-            <button class="page-btn active" id="page1">1</button>
-            <button class="page-btn" id="page2">2</button>
-            <button class="page-btn" id="page3">3</button>
-            <button class="page-btn" id="page4">4</button>
-            <span>...</span>
-            <button class="page-btn" id="next">&gt;</button>
+                    <h3><%= test.name %></h3>
+                    <p><%= test.excerpt %></p>
+                </div>
+            <% }) %>
         </div>
     </div>
+    <div class="pages">
+        <button class="page-btn" id="prev">&lt;</button>
+        <button class="page-btn active" id="page1">1</button>
+        <button class="page-btn" id="page2">2</button>
+        <button class="page-btn" id="page3">3</button>
+        <button class="page-btn" id="page4">4</button>
+        <span>...</span>
+        <button class="page-btn" id="next">&gt;</button>
+    </div>
     <%- include('partials/footer')%>
-    <script src="/public/js/app.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/pagination.js"></script>
 </body>
 </html>

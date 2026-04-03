@@ -170,7 +170,7 @@
 
 .hsa-tab-labels,
 .tsa-tab-labels,
-.VACT-tab-labels,
+.vact-tab-labels,
 .g12-tab-labels,
 .g11-tab-labels,
 .g10-tab-labels {
@@ -183,7 +183,7 @@
 
 .hsa-tab-labels label,
 .tsa-tab-labels label,
-.VACT-tab-labels label, 
+.vact-tab-labels label, 
 .g12-tab-labels label,
 .g11-tab-labels label,
 .g10-tab-labels label {
@@ -197,7 +197,7 @@
 
 .hsa-tab-labels label:hover,
 .tsa-tab-labels label:hover,
-.VACT-tab-labels label:hover,
+.vact-tab-labels label:hover,
 .g12-tab-labels label:hover,
 .g11-tab-labels label:hover,
 .g10-tab-labels label:hover {
@@ -214,11 +214,11 @@
 #tsa-tab-language:checked ~ .tsa-tab-labels [for="tsa-tab-language"],
 #tsa-tab-science:checked ~ .tsa-tab-labels [for="tsa-tab-science"],
 #tsa-tab-sample:checked ~ .tsa-tab-labels [for="tsa-tab-sample"],
-#vact-tab-math:checked ~ .VACT-tab-labels [for="vact-tab-math"],
-#vact-tab-language:checked ~ .VACT-tab-labels [for="vact-tab-language"],
-#vact-tab-english:checked ~ .VACT-tab-labels [for="vact-tab-english"],
-#vact-tab-science:checked ~ .VACT-tab-labels [for="vact-tab-science"],
-#vact-tab-sample:checked ~ .VACT-tab-labels [for="vact-tab-sample"],
+#vact-tab-math:checked ~ .vact-tab-labels [for="vact-tab-math"],
+#vact-tab-language:checked ~ .vact-tab-labels [for="vact-tab-language"],
+#vact-tab-english:checked ~ .vact-tab-labels [for="vact-tab-english"],
+#vact-tab-science:checked ~ .vact-tab-labels [for="vact-tab-science"],
+#vact-tab-sample:checked ~ .vact-tab-labels [for="vact-tab-sample"],
 #g12-tab-math:checked ~ .g12-tab-labels [for="g12-tab-math"],
 #g12-tab-language:checked ~ .g12-tab-labels [for="g12-tab-language"],
 #g12-tab-english:checked ~ .g12-tab-labels [for="g12-tab-english"],
@@ -272,7 +272,7 @@
 }
 
 .hsa-section .tab-slider { width: 500%; } /* 5 tabs */
-.VACT-section .tab-slider { width: 500%; } /* 5 tabs */
+.vact-section .tab-slider { width: 500%; } /* 5 tabs */
 .tsa-section .tab-slider { width: 400%; } /* 4 tabs */
 .g12-section .tab-slider { width: 1000%; } /* 10 tabs */
 .g11-section .tab-slider { width: 1000%; } /* 10 tabs */
@@ -288,7 +288,7 @@
 }
 
 .hsa-section .tab-panel { width: 20%; }
-.VACT-section .tab-panel { width: 20%; }
+.vact-section .tab-panel { width: 20%; }
 .tsa-section .tab-panel { width: 25%; }
 .g12-section .tab-panel,
 .g11-section .tab-panel,
@@ -358,7 +358,7 @@
 /* ========== CARDS ========== */
 .card {
     /* width: 250px; */
-    min-width: 25%;
+    min-width: calc(25% - 20px);
     margin: 10px;
     text-align: center;
     position: relative;
@@ -368,6 +368,8 @@
 }
 
 .card img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
     width: 100%;
     transition: 0.4s ease;
 }
@@ -458,7 +460,6 @@
     flex: 1;
     overflow: hidden;
     display: flex;
-    gap: 20px;
 }
 
 .thpt-card {
