@@ -33,25 +33,25 @@ router.get('/logs', (req, res) => {
 router.post('/documents/add/:categoryId', (req, res) => {
   const { categoryId } = req.params;
   const testData = req.body;
-  controller.addTest(categoryId, testData);
+  adminController.addTest(categoryId, testData);
   res.redirect('/admin/documents');
 });
 
 router.post('/documents/update/:categoryId/:testIndex', (req, res) => {
   const { categoryId, testIndex } = req.params;
-  controller.updateTest(categoryId, parseInt(testIndex), req.body);
+  adminController.updateTest(categoryId, parseInt(testIndex), req.body);
   res.redirect('/admin/documents');
 });
 
 router.post('/documents/delete/:categoryId/:testIndex', (req, res) => {
   const { categoryId, testIndex } = req.params;
-  controller.deleteTest(categoryId, parseInt(testIndex));
+  adminController.deleteTest(categoryId, parseInt(testIndex));
   res.redirect('/admin/documents');
 });
 
 // Access logs
 router.get('/logs', (req, res) => {
-  const logs = controller.getLogs();
+  const logs = adminController.getLogs();
   res.render('admin/logs', { logs });
 });
 

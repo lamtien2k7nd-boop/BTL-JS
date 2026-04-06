@@ -365,6 +365,9 @@
     z-index: 2;
     box-sizing: border-box;
     text-align: center;
+    transition: 0.4s ease;
+    border-radius: 10px;
+    border: 1px solid none;
 }
 
 .card img {
@@ -380,12 +383,19 @@
     transition: 0.4s ease;
 }
 
+.card:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 1px solid #ffe4ce;
+    transform: translateY(-10px);
+}
+
 .card:hover img{
     transform: translateY(-10px);
 }
 .card:hover p {
     transform: translateY(-30px);
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     /* padding: 5px; */
 }
 
