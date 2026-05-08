@@ -339,6 +339,7 @@ a:hover::after {
     color: #000;
 }
 .footer{
+    background-color: #e7e7e7;
     display:flex;
     height: 40vh;
     gap:50px;

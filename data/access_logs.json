@@ -411,5 +411,54 @@
     "ip": "::1",
     "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
     "timestamp": "2026-04-06T10:24:10.209Z"
+  },
+  {
+    "type": "page_view",
+    "path": "/",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+    "timestamp": "2026-04-30T02:03:47.578Z"
+  },
+  {
+    "type": "page_view",
+    "path": "/favicon.ico",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+    "timestamp": "2026-04-30T02:03:53.572Z"
+  },
+  {
+    "type": "page_view",
+    "path": "/",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+    "timestamp": "2026-04-30T02:04:02.194Z"
+  },
+  {
+    "type": "page_view",
+    "path": "/",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+    "timestamp": "2026-05-04T03:02:27.451Z"
+  },
+  {
+    "type": "page_view",
+    "path": "/favicon.ico",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+    "timestamp": "2026-05-04T03:02:28.334Z"
+  },
+  {
+    "type": "page_view",
+    "path": "/",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+    "timestamp": "2026-05-04T03:02:58.258Z"
+  },
+  {
+    "type": "page_view",
+    "path": "/",
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+    "timestamp": "2026-05-04T03:03:02.958Z"
   }
 ]
