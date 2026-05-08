@@ -1,0 +1,34 @@
+{
+  "name": "learning-web",
+  "version": "1.0.0",
+  "description": "📚 Tài liệu miễn phí - Nền Tảng Chia Sẻ Tài Liệu Học Tập Xuyên Suốt\r Tài liệu miễn phí là một ứng dụng web hiện đại nhằm số hóa và hệ thống hóa kho tàng tài liệu học tập. Dự án tập trung hỗ trợ học sinh THPT ôn thi cuối cấp/đại học, đồng thời mở rộng lộ trình sang các kiến thức chuyên sâu dành cho sinh viên (Đại cương, CNTT, Kinh tế...).",
+  "keywords": [
+    "learning"
+  ],
+  "homepage": "https://github.com/lamtien2k7nd-boop/BTL-JS#readme",
+  "bugs": {
+    "url": "https://github.com/lamtien2k7nd-boop/BTL-JS/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lamtien2k7nd-boop/BTL-JS.git"
+  },
+  "license": "ISC",
+  "author": "Lam Tien",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "chart.js": "^4.5.1",
+    "ejs": "^5.0.1",
+    "express": "^5.2.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.19.0",
+    "express.js": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
