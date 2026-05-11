@@ -1,0 +1,195 @@
+.logo {
+    display: flex;
+    justify-content: center; /* Căn giữa logo theo chiều ngang */
+    align-items: center;     /* Căn giữa logo theo chiều dọc */
+}
+
+.logo img {
+    width: 160px;           /* Chỉnh lại kích thước ảnh nếu nó quá to */
+    height: auto;
+    margin-bottom: 20px;
+}
+/* .tab input[type = "radio"]{
+    display: none;
+} */
+.label label{
+    margin-right: 20px;
+}
+.taskbar{
+    display: flex;
+    justify-content: center;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+.menu{
+    display: none;
+    background-color: aqua;
+    position: absolute;
+}
+/* .menu{
+    display: none;
+} */
+#taskbar-HSA:checked ~ .menu,
+#taskbar-TSA:checked ~ .menu
+{
+    background-color: brown;
+    display: flex;
+    justify-content: space-between;
+}
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Để chữ đậm như trong hình */
+    color: #444444;    /* Màu xám đậm tương tự ảnh */
+}
+.title-mini p{
+    font-size: 15px;
+    text-align: center;
+    margin: 40px 0 0 0;
+    color: rgba(0, 0, 0, 0.577);
+}
+.title-mini p:hover{
+    color: #000;
+}
+.title p{
+    font-size: 24px;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+.title-img{
+    display: flex;
+    justify-content: center;
+}
+.title-img img{
+    height: 386px;
+    width: auto;
+    margin-bottom: 20px;
+}
+.title-noi-dung p{
+    line-height: 1.6;
+    width: 775px;
+    margin: 0 auto 20px auto;
+    color: rgba(0, 0, 0, 0.577);
+}
+.title-noi-dung a{
+    text-decoration: none;
+}
+.noi-dung h2{
+    line-height: 1.6;
+    width: 775px;
+    margin: 0 auto 20px auto;
+    color: rgb(194, 2, 2);
+}
+.noi-dung{
+    line-height: 1.6;
+    width: 775px;
+    margin: 0 auto 20px auto;
+}
+.list-on-thi li{
+    margin: 0 0 20px 0;
+}
+.noi-dung a{
+    text-decoration: none;
+    color: orangered;
+    margin: 35%;
+}
+.footer{
+    background-color: #e7e7e7;
+    display:flex;
+    height: 40vh;
+    gap:50px;
+    padding:40px;
+    justify-items: center;
+    align-items: center;
+    /* text-align: center; */
+}
+.shorting{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+    color: #474747;
+}
+.shorting img{
+    width: 250px;
+    height: 100px;
+}
+.f-cate{
+    flex:1;
+}
+.f-cate h2{
+    color: #2d9a8a;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.f-cate ul{
+    list-style: none;
+}
+.f-cate li{
+    padding: 10px;
+    transition: ease 0.5s;
+}
+.f-cate a{
+    color:#6d6d6d;
+    transition: ease 0.4s;
+
+}
+.more{
+    flex:1;
+}
+.more h2{
+    color: #2d9a8a;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.more ul{
+    list-style: none;
+}
+.more li{
+    padding: 10px;
+    transition: ease 0.4s;
+    color: #6d6d6d;
+}
+.more a{
+    color:#6d6d6d;
+    transition: ease 0.4s;
+}
+.more li:hover{
+    transform: translateY(-5px);
+}
+.more a:hover{
+    color:#000
+
+}
+.more li::before{
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 8px solid #666; 
+    margin-right: 12px;
+}
+.f-cate li:hover{
+    transform: translateY(-5px);
+}
+.f-cate a:hover{
+    color: #000;
+}
+.f-cate a::before{
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 8px solid #666; 
+    margin-right: 12px;
+}
